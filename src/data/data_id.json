@@ -1,0 +1,9 @@
+{
+    "titles": {
+        "webtitle": "Dokumentasi BayarPlanner",
+        "start": "Mulai merencanakan"
+    },
+    "register": {
+        "opening": "Ingat untuk menyimpan data setelah anda mengisi kalender. Semua data akan disimpan sementara didalam browser. Setelah pemakaian data harus disimpan kedalam hardisk, atau data akan dihapus dari browser. Ini sengaja dilakukan agar semua data berada dalam kendali Anda."
+    }
+}
