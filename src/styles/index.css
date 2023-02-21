@@ -50,4 +50,7 @@
   .navbar {
     @apply h-full w-full bg-mainDrk rounded-md flex items-center justify-between p-3 text-txLit1;
   }
+  .navbar-btn {
+    @apply flex items-center justify-center gap-2 border border-txLit1 rounded-md bg-fillDrk bg-opacity-0 hover:bg-opacity-30 cursor-pointer active:bg-opacity-70 p-1 px-3 transition-all w-32 text-center;
+  }
 }

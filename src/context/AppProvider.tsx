@@ -15,6 +15,10 @@ export const AppProvider = ({ children }: Props) => {
     dispatch({ type: "SET_LANGUAGE", payload: lang });
   };
 
+  const switchLanguage = () => {
+    dispatch({ type: "SWITCH_LANGUAGE" });
+  };
+
   const translate = (key1: string, key2: string) => {
     let language = state.language;
 
@@ -43,9 +47,11 @@ export const AppProvider = ({ children }: Props) => {
   const value = {
     state,
     dispatch,
-
     setCloseModal,
     setOpenModal,
+    translate,
+    setLanguage,
+    switchLanguage,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

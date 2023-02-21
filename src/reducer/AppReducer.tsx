@@ -19,5 +19,22 @@ export const appReducer = (state: AppState, action: OpenModalAction) => {
       openModal: { status: false, value: "" },
     };
   }
+
+  if (action.type === "SET_LANGUAGE") {
+    const language = action.payload;
+    return {
+      ...state,
+      language,
+    };
+  }
+
+  if (action.type === "SWITCH_LANGUAGE") {
+    const language = state.language === "id" ? "en" : "id";
+
+    return {
+      ...state,
+      language,
+    };
+  }
   return state;
 };

@@ -1,12 +1,14 @@
 import React from "react";
+import { useGlobalContext } from "../../context/AppProvider";
 import Register from "./Register";
 
 type Props = {};
 
 const Homepage = (props: Props) => {
+  const { translate } = useGlobalContext();
   return (
     <div className=" col-span-9 w-full h-full p-3">
-      <h2>Mulai</h2>
+      <h2>{translate("titles", "start")}</h2>
       <p>
         Semua data akan disimpan sementara didalam browser. Setelah pemakaian
         data harus disimpan kedalam hardisk, atau data akan dihapus dari
