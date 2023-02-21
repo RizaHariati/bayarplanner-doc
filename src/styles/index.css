@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* text-decoration: none; */
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+@layer base {
+  body {
+    @apply text-txDrk1;
+  }
+  h1 {
+    @apply capitalize text-2xl font-opensans font-semibold;
+  }
+  h2 {
+    @apply capitalize text-3xl font-semibold text-mainDrk;
+  }
+  h3 {
+    @apply text-lg font-opensans font-medium text-mainDrk;
+  }
+  h4 {
+    @apply capitalize text-base font-opensans font-medium;
+  }
+  h5 {
+    @apply capitalize text-base font-opensans font-normal;
+  }
+}
+@layer components {
+  /* ---------------------------- layout ---------------------------- */
+  .main-layout-container {
+    @apply bg-fillLit h-screen w-full overflow-hidden relative;
+  }
+  .main-layout {
+    @apply h-full w-full max-w-5xl mx-auto min-h-screen;
+  }
+
+  /* ---------------------------- general --------------------------- */
+  .navbar-container {
+    @apply h-14 w-full bg-fillLit p-2 pb-0 top-0 left-0;
+  }
+  .navbar {
+    @apply h-full w-full bg-mainDrk rounded-md flex items-center justify-between p-3 text-txLit1;
+  }
+}
