@@ -5,7 +5,7 @@ type Props = {};
 const Register = (props: Props) => {
   return (
     <div>
-      <h3>Register Name</h3>
+      <h2>Register Nama</h2>
 
       <p>
         Nama akan digunakan untuk database penyimpanan jadwal. Kalender tidak

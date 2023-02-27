@@ -1,4 +1,7 @@
 import { AppState } from "../context/interfaces";
+import { SidebarType } from "../context/types.d";
+import { sidebar_en } from "../data/sidebar_en";
+import { sidebar_id } from "../data/sidebar_id";
 
 interface OpenModalAction {
   type: string;
@@ -20,20 +23,17 @@ export const appReducer = (state: AppState, action: OpenModalAction) => {
     };
   }
 
-  if (action.type === "SET_LANGUAGE") {
-    const language = action.payload;
-    return {
-      ...state,
-      language,
-    };
-  }
-
   if (action.type === "SWITCH_LANGUAGE") {
     const language = state.language === "id" ? "en" : "id";
+    let sidebarContent: SidebarType = sidebar_id;
 
+    if (state.language === "id") {
+      sidebarContent = sidebar_en;
+    }
     return {
       ...state,
       language,
+      sidebarContent,
     };
   }
   return state;

@@ -1,38 +1,62 @@
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { useGlobalContext } from "../../context/AppProvider";
+import NewData from "./NewData";
 import Register from "./Register";
 
 type Props = {};
 
 const Homepage = (props: Props) => {
-  const { translate } = useGlobalContext();
+  const {
+    state: { sidebarContent },
+  } = useGlobalContext();
   return (
-    <div className=" col-span-9 w-full h-full p-3">
-      <h2>{translate("titles", "start")}</h2>
-      <p>
-        Semua data akan disimpan sementara didalam browser. Setelah pemakaian
-        data harus disimpan kedalam hardisk, atau data akan dihapus dari
-        browser. Ini sengaja dilakukan agar semua data berada dalam kendali
-        Anda.
-      </p>
-      <p>
-        Anda bisa menghapus semua data dalam browser, tapi untuk data yang sudah
-        didownload, harus anda hapus secara manual dari komputer atau ponsel
-        anda.
-      </p>
-      <Register />
+    <div>
+      <h1>{sidebarContent["start"].title}</h1>
       <div>
-        <h3>Tambahkan data baru</h3>
+        {sidebarContent["start"].opening?.map((item, index) => {
+          return <p key={index}>{item}</p>;
+        })}
+      </div>
+      <Register />
+      <NewData />
+      <div>
+        <h2>Edit Data</h2>
         <p>
-          Penjadwalan aktivitas bisa menjangkau dua bulan dari tanggal pertama
-          yang dipilih. Untuk sementara penjadwalan hanya bisa dilakukan untuk
-          tahun 2023 dan tidak bisa menjadwalkan untuk bulan yang sudah lewat.
+          Anda bisa mengedit satu item data dan membuat, atau seluruh data dalam
+          satu kategori。Kategori dibuat otomatis saat anda memasukkan data
+          baru.
         </p>
         <div>
           <ul className=" list-disc list-inside">
-            <li></li>
-            <li>Masukkan Nama </li>
-            <li>Pilih Avatar</li>
+            <li>Di main menu pilih 'Kalender'</li>
+            <li>
+              Dibagian bawah kalender Tekan tombol
+              <FontAwesomeIcon
+                className=" text-paid font-bold"
+                icon={faEdit}
+              />{" "}
+              disebelah item yang akan diedit.
+            </li>
+
+            <li>
+              Anda akan masuk kedaftar list item yang anda bisa edit. Pilih
+              salah satu dengan menekan tombol 'Edit'
+            </li>
+            <li>
+              Masukkan Total pembayaran untuk satukali transaksi. Total akan
+              otomatis dipecah dalam satuan hari.
+            </li>
+            <li>
+              Pilih keluar jika melakukan pembayaran, pilih masuk, jika menerima
+              pembayaran
+            </li>
+            <li>
+              Pilih tanggal pembayaran, jika sudah dilunasi saat memasukkan
+              penjadwalan. Tanggal yang dapat dipilih maksimal adalah sesuai
+              tanggal yang diklik dalam kalender.
+            </li>
           </ul>
         </div>
         <p>

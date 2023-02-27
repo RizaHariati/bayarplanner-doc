@@ -1,3 +1,5 @@
+import { IconDefinition, IconProp } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
 import { IGatsbyImageData } from "gatsby-plugin-image";
 
 export type ProjectType = {
@@ -35,4 +37,14 @@ export type PortfolioType = {
 export type ShowModalType = {
   status: boolean;
   value: string;
+};
+
+export type SidebarType = {
+  [key: string]: {
+    title: string;
+    link: string;
+    icon: IconProp;
+    content?: { [key: string]: any };
+    opening?: string[];
+  };
 };

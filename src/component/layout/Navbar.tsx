@@ -1,8 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFlagUsa } from "@fortawesome/free-solid-svg-icons";
+import { faFlagUsa, faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { faFlag } from "@fortawesome/free-regular-svg-icons";
 import { useGlobalContext } from "../../context/AppProvider";
+import { StaticImage } from "gatsby-plugin-image";
 
 type Props = {};
 
@@ -20,14 +21,21 @@ const Navbar = (props: Props) => {
     <div className="navbar-container sticky">
       <div className="navbar">
         <div className="logo">
+          <div className=" rounded-full overflow-hidden h-8 w-8 bg-txLit2 hover:bg-white active:bg-txLit2 cursor-pointer">
+            <StaticImage
+              src="../../images/bayarplanner-logo.png"
+              alt="bayarplanner-logo"
+              className="h-full"
+            />
+          </div>
           <a href="https://bayarplanner.com/">
-            <h3 className=" cursor-pointer text-txLit1 hover:text-txDrk2 active:text-txLit2">
+            <h3 className=" cursor-pointer text-txLit1 hover:text-white transition-all active:text-txLit2">
               {translate("titles", "webtitle")}
             </h3>
           </a>
         </div>
         <button className="navbar-btn" onClick={handleClick}>
-          <FontAwesomeIcon icon={language === "id" ? faFlagUsa : faFlag} />
+          <FontAwesomeIcon icon={faLanguage} className="text-txLit1 text-xl" />
           <p className="transition-all">
             {language === "id" ? "English" : "Indonesia"}{" "}
           </p>

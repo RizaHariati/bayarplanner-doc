@@ -11,10 +11,6 @@ interface Props {
 export const AppProvider = ({ children }: Props) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
 
-  const setLanguage = (lang: string) => {
-    dispatch({ type: "SET_LANGUAGE", payload: lang });
-  };
-
   const switchLanguage = () => {
     dispatch({ type: "SWITCH_LANGUAGE" });
   };
@@ -28,7 +24,6 @@ export const AppProvider = ({ children }: Props) => {
     } else if (language === "en") {
       langData = data_en;
     }
-
     return langData[key1][key2];
   };
   const setCloseModal = () => {
@@ -50,7 +45,6 @@ export const AppProvider = ({ children }: Props) => {
     setCloseModal,
     setOpenModal,
     translate,
-    setLanguage,
     switchLanguage,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

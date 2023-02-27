@@ -6,9 +6,8 @@ export type AppContextProps = {
   state: AppState;
 
   setCloseModal: () => void;
-  setOpenModal: (value: string) => void;
   translate: (string1: string, string2: string) => string;
-  setLanguage: (lang: string) => void;
+
   switchLanguage: () => void;
 };
 
