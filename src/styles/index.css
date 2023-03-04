@@ -33,6 +33,9 @@
   h5 {
     @apply capitalize text-base font-opensans font-normal;
   }
+  li > span {
+    @apply font-bold;
+  }
 }
 @layer components {
   /* ---------------------------- layout ---------------------------- */

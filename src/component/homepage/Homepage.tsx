@@ -1,9 +1,11 @@
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { Fragment } from "react";
 import { useGlobalContext } from "../../context/AppProvider";
 import NewData from "./NewData";
 import Register from "./Register";
+import { renderHTML } from "../../../.cache/page-ssr/index";
+import HTMLReactParser from "html-react-parser";
 
 type Props = {};
 
@@ -11,6 +13,8 @@ const Homepage = (props: Props) => {
   const {
     state: { sidebarContent },
   } = useGlobalContext();
+  const data =
+    "Pilih <span>keluar</span> jika melakukan pembayaran, pilih <span>masuk</span>, jika menerima pembayaran";
   return (
     <div>
       <h1>{sidebarContent["start"].title}</h1>
@@ -33,10 +37,7 @@ const Homepage = (props: Props) => {
             <li>Di main menu pilih 'Kalender'</li>
             <li>
               Dibagian bawah kalender Tekan tombol
-              <FontAwesomeIcon
-                className=" text-paid font-bold"
-                icon={faEdit}
-              />{" "}
+              <FontAwesomeIcon className=" text-paid font-bold" icon={faEdit} />
               disebelah item yang akan diedit.
             </li>
 
@@ -48,10 +49,7 @@ const Homepage = (props: Props) => {
               Masukkan Total pembayaran untuk satukali transaksi. Total akan
               otomatis dipecah dalam satuan hari.
             </li>
-            <li>
-              Pilih keluar jika melakukan pembayaran, pilih masuk, jika menerima
-              pembayaran
-            </li>
+            <li>{HTMLReactParser(data)}</li>
             <li>
               Pilih tanggal pembayaran, jika sudah dilunasi saat memasukkan
               penjadwalan. Tanggal yang dapat dipilih maksimal adalah sesuai

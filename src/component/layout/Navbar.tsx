@@ -28,7 +28,11 @@ const Navbar = (props: Props) => {
               className="h-full"
             />
           </div>
-          <a href="https://bayarplanner.com/">
+          <a
+            href="https://bayarplanner.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <h3 className=" cursor-pointer text-txLit1 hover:text-white transition-all active:text-txLit2">
               {translate("titles", "webtitle")}
             </h3>
