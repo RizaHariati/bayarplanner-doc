@@ -41,7 +41,6 @@ export const AppProvider = ({ children }: Props) => {
   };
 
   const setPageLocation = (category: string, page: string) => {
-    console.log({ page });
     dispatch({
       type: "SET_CATEGORY",
       payload: { category, page },

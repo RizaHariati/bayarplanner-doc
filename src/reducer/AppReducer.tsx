@@ -35,6 +35,8 @@ export const appReducer = (state: AppState, action: OpenModalAction) => {
         pageContent = state.paymentContent;
       } else if (page === "invoice") {
         pageContent = state.invoiceContent;
+      } else if (page === "start") {
+        pageContent = state.homepageContent;
       } else {
         pageContent = state.fileContent;
       }

@@ -4,7 +4,7 @@ import PageBase from "../component/homepage/PageBase";
 import Sidebar from "../component/layout/Sidebar";
 import { useGlobalContext } from "../context/AppProvider";
 
-const Filemanagement = ({ location: { pathname } }: PageProps) => {
+const File = ({ location: { pathname } }: PageProps) => {
   const {
     state: {
       pageLocation: { page },
@@ -25,4 +25,4 @@ const Filemanagement = ({ location: { pathname } }: PageProps) => {
   }
 };
 
-export default Filemanagement;
+export default File;

@@ -1,11 +1,10 @@
 import { navigate, PageProps } from "gatsby";
 import React, { useEffect } from "react";
-import Homepage from "../component/homepage/Homepage";
 import PageBase from "../component/homepage/PageBase";
 import Sidebar from "../component/layout/Sidebar";
 import { useGlobalContext } from "../context/AppProvider";
 
-const startpage = ({ location: { pathname } }: PageProps) => {
+const Start = ({ location: { pathname } }: PageProps) => {
   const {
     state: {
       pageLocation: { page },
@@ -20,8 +19,12 @@ const startpage = ({ location: { pathname } }: PageProps) => {
 
   if (pathname !== "/" + page + "/") return <div></div>;
   else {
-    return <Sidebar>{/* <PageBase /> */}</Sidebar>;
+    return (
+      <Sidebar>
+        <PageBase />
+      </Sidebar>
+    );
   }
 };
 
-export default startpage;
+export default Start;

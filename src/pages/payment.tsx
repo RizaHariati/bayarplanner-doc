@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Sidebar from "../component/layout/Sidebar";
 import { useGlobalContext } from "../context/AppProvider";
-import PageContent from "../component/homepage/PageContent";
 import PageBase from "../component/homepage/PageBase";
 import { navigate, PageProps } from "gatsby";
 

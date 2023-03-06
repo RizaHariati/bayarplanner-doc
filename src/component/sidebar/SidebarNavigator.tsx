@@ -17,19 +17,19 @@ const SidebarNavigator = (props: Props) => {
       <div>
         {Object.keys(sidebarContent).map((item: string, index: number) => {
           const { title, link, icon, content } = sidebarContent[item];
+
           return (
             <div key={index}>
               <div>
                 <button
-                  className="text-mainDrk flex gap-2 items-center "
+                  className="text-mainDrk flex gap-2 items-center justify-start "
                   onClick={() => {
-                    console.log(item);
                     setPageLocation("", item);
                     navigate(link);
                   }}
                 >
                   <FontAwesomeIcon icon={icon} />
-                  <h3>{title}</h3>
+                  <h3 className="text-left">{title}</h3>
                 </button>
               </div>
               {content && (
