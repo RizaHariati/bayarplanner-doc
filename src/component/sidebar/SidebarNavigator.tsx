@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { navigate } from "gatsby";
 
 import { useGlobalContext } from "../../context/AppProvider";
@@ -8,10 +8,9 @@ type Props = {};
 
 const SidebarNavigator = (props: Props) => {
   const {
-    state: { language, sidebarContent },
+    setPageLocation,
+    state: { sidebarContent },
   } = useGlobalContext();
-
-  useEffect(() => {}, [language]);
 
   return (
     <div className="sidebar-container ">
@@ -20,28 +19,37 @@ const SidebarNavigator = (props: Props) => {
           const { title, link, icon, content } = sidebarContent[item];
           return (
             <div key={index}>
-              <button
-                onClick={() => {
-                  navigate(link);
-                }}
-              >
-                <div className="text-mainDrk flex gap-2 items-center">
+              <div>
+                <button
+                  className="text-mainDrk flex gap-2 items-center "
+                  onClick={() => {
+                    console.log(item);
+                    setPageLocation("", item);
+                    navigate(link);
+                  }}
+                >
                   <FontAwesomeIcon icon={icon} />
                   <h3>{title}</h3>
-                </div>
-              </button>
+                </button>
+              </div>
               {content && (
                 <div
                   className={`pl-6 transition-all overflow-hidden ${
-                    (location.pathname === "/"
-                      ? "/startpage/"
-                      : location.pathname) === link
-                      ? " h-fit "
-                      : "h-0"
+                    location.pathname === link ? " h-fit " : "h-0"
                   }`}
                 >
                   {Object.keys(content!).map((contentItem, contentIndex) => {
-                    return <p key={contentIndex}>{content[contentItem]}</p>;
+                    return (
+                      <button
+                        className="w-full hover:text-txDrk2 active:text-txDrk3 transition-all text-left"
+                        onClick={() => {
+                          setPageLocation(contentItem, item);
+                        }}
+                        key={contentIndex}
+                      >
+                        {content[contentItem]}
+                      </button>
+                    );
                   })}
                 </div>
               )}
@@ -58,7 +66,7 @@ const SidebarNavigator = (props: Props) => {
         </a>
         <a
           href="https://www.ichacodes.com/"
-          className="text-mainDrk hover:font-bold transition-all"
+          className="text-mainDrk hover:font-bold transition-all underline hover:text-mainDrkHover"
         >
           Bayarplanner by Riza Hariati for IchaCodes copyright &copy;
           {new Date().getFullYear()}

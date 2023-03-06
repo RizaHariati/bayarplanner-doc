@@ -20,13 +20,13 @@ export const sidebar_en: SidebarType = {
 
   start: {
     title: "Start Planning",
-    link: "/startpage/",
+    link: "/start/",
     icon: faFlag,
     content: {
       register: "Register Name",
       input: "New Data",
       edit: "Edit Data",
-      delete: "Hapus Data",
+      delete: "Delete Data",
     },
     opening: [
       "BayarPlanner was made to help you record your financial transactions and arrange your schedule based on those transactions. Therefore the smallest unit ini this app is day instead of product item.",
@@ -68,11 +68,11 @@ export const sidebar_en: SidebarType = {
 
   file: {
     title: "File Management",
-    link: "/filemanagement/",
+    link: "/file/",
     icon: faFile,
     content: {
-      start: "Mulai",
-      payment: "Pembayaran",
+      start: "File name",
+      payment: "Look at file",
       invoice: "Kwitansi",
       file: "Manajemen File",
     },

@@ -7,9 +7,9 @@ type Props = { children: React.ReactNode };
 const Sidebar = ({ children }: Props) => {
   return (
     <Layout>
-      <div className="grid grid-cols-12 w-full h-full">
+      <div className="grid grid-cols-12 w-full h-full pt-10">
         <SidebarNavigator />
-        <div className=" col-span-9 w-full h-full p-3 overflow-y-scroll pb-20">
+        <div className=" col-span-9 w-full h-full p-3 overflow-y-hidden pb-20">
           {children}
         </div>
       </div>

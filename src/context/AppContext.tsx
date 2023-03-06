@@ -7,7 +7,7 @@ export type AppContextProps = {
 
   setCloseModal: () => void;
   translate: (string1: string, string2: string) => string;
-
+  setPageLocation: (category: string, page: string) => void;
   switchLanguage: () => void;
 };
 

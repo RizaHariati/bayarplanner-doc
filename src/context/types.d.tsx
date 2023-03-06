@@ -48,3 +48,13 @@ export type SidebarType = {
     opening?: string[];
   };
 };
+
+export type PageDataContentType = {
+  title: string;
+  list: { text: string; img?: string }[];
+  opening?: string[];
+  closing?: string[];
+};
+export type PageDataType = {
+  [key: string]: PageDataContentType;
+};

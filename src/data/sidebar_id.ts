@@ -20,7 +20,7 @@ export const sidebar_id: SidebarType = {
 
   start: {
     title: "Mulai Merencanakan",
-    link: "/startpage/",
+    link: "/start/",
     icon: faFlag,
     content: {
       register: "Register Nama",
@@ -67,11 +67,11 @@ export const sidebar_id: SidebarType = {
 
   file: {
     title: "Manajemen File",
-    link: "/filemanagement/",
+    link: "/file/",
     icon: faFile,
     content: {
-      start: "Mulai",
-      payment: "Pembayaran",
+      start: "File name",
+      payment: "look at fie",
       invoice: "Kwitansi",
       file: "Manajemen File",
     },

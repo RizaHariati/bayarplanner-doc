@@ -10,7 +10,7 @@ module.exports = {
 
   theme: {
     transitionDuration: {
-      DEFAULT: "750ms",
+      DEFAULT: "500ms",
     },
 
     fontFamily: {
@@ -40,9 +40,10 @@ module.exports = {
         late: "#AB494C",
         lateOpacity: "#ffe5e6",
         lateHover: "#994144",
+
         txDrk1: "#525252",
-        txDrk2: "#6F6F6F",
-        txDrk3: "#B0B0B0",
+        txDrk2: "#27272a",
+        txDrk3: "#71717a",
         txLit1: "#FFFFFF",
         txLit2: "#FBFAF1",
       },

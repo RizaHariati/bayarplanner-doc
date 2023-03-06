@@ -1,4 +1,5 @@
-import React, { useContext, useReducer } from "react";
+import { navigate, PageProps } from "gatsby";
+import React, { useContext, useEffect, useReducer } from "react";
 import { appReducer } from "../reducer/AppReducer";
 import { AppContext } from "./AppContext";
 import { initialState } from "./initialstate";
@@ -39,6 +40,13 @@ export const AppProvider = ({ children }: Props) => {
     });
   };
 
+  const setPageLocation = (category: string, page: string) => {
+    console.log({ page });
+    dispatch({
+      type: "SET_CATEGORY",
+      payload: { category, page },
+    });
+  };
   const value = {
     state,
     dispatch,
@@ -46,6 +54,7 @@ export const AppProvider = ({ children }: Props) => {
     setOpenModal,
     translate,
     switchLanguage,
+    setPageLocation,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

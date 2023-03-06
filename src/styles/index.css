@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   /* text-decoration: none; */
 }
 *::-webkit-scrollbar {
@@ -43,30 +44,33 @@
     @apply bg-fillLit h-screen w-full overflow-hidden relative;
   }
   .main-layout {
-    @apply h-full w-full max-w-5xl mx-auto min-h-screen;
+    @apply h-full w-full max-w-5xl mx-auto min-h-screen overflow-y-scroll scroll-smooth;
   }
 
+  .sidebar-pages-container {
+    @apply p-3 h-full w-full relative;
+  }
   /* ---------------------------- general --------------------------- */
   .navbar-container {
     @apply h-14 w-full bg-fillLit p-2 pb-0 top-0 left-0;
   }
   .navbar {
-    @apply h-full w-full bg-mainDrk rounded-md flex items-center justify-between p-3 text-txLit1;
+    @apply h-full w-full bg-mainDrk rounded-md flex items-center justify-between p-3 text-txLit1 max-w-5xl mx-auto;
   }
   .navbar-btn {
     @apply flex items-center justify-between gap-2 border border-txLit1 rounded-md bg-fillDrk bg-opacity-0 hover:bg-opacity-30 cursor-pointer active:bg-opacity-70 p-1 px-3 transition-all w-32 text-center;
+  }
+
+  .sidebar-container {
+    @apply col-span-3 w-full h-full border-r border-borderColor flex flex-col items-start justify-between pt-3 pb-12;
   }
   .index-btn-group {
     @apply h-32 w-full grid grid-cols-4 gap-3 mt-10;
   }
   .index-btn {
-    @apply w-full border h-full border-mainDrk hover:border-mainMed active:border-mainDrkHover transition-all rounded-md shadow-sm hover:shadow-md uppercase font-bold text-lg m-auto flex flex-col items-center justify-start text-mainDrk hover:text-mainMed active:text-mainDrkHover active:bg-white hover:bg-txLit2 text-center p-3 pt-7 gap-3;
+    @apply w-full border h-full border-mainDrk hover:border-mainMed active:border-mainDrkHover transition-all rounded-md shadow-sm hover:shadow-md uppercase font-bold text-lg m-auto flex flex-col items-center justify-start text-mainDrk hover:text-mainMed active:text-mainDrkHover active:bg-txLit1 hover:bg-txLit2 text-center p-3 pt-7 gap-3;
   }
   .logo {
     @apply flex gap-2 items-center justify-start;
-  }
-
-  .sidebar-container {
-    @apply col-span-3 w-full h-full border-r border-borderColor flex flex-col items-start justify-between pb-20;
   }
 }

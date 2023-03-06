@@ -1,25 +1,30 @@
-import React from "react";
+import { PageProps, navigate } from "gatsby";
+import React, { useEffect } from "react";
+import PageBase from "../component/homepage/PageBase";
 import Sidebar from "../component/layout/Sidebar";
 import { useGlobalContext } from "../context/AppProvider";
 
 type Props = {};
 
-const Invoice = (props: Props) => {
+const Invoice = ({ location: { pathname } }: PageProps) => {
   const {
-    state: { sidebarContent },
+    state: {
+      pageLocation: { page },
+    },
   } = useGlobalContext();
-  return (
-    <Sidebar>
-      <div>
-        <div>
-          <h1>{sidebarContent["invoice"].title}</h1>
-          {sidebarContent["invoice"].opening?.map((item, index) => {
-            return <p key={index}>{item}</p>;
-          })}
-        </div>
-      </div>
-    </Sidebar>
-  );
+  useEffect(() => {
+    if (pathname !== "/" + page + "/") {
+      navigate("/");
+    }
+  }, []);
+  if (pathname !== "/" + page + "/") return <div></div>;
+  else {
+    return (
+      <Sidebar>
+        <PageBase />
+      </Sidebar>
+    );
+  }
 };
 
 export default Invoice;

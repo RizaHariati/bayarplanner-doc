@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFlagUsa, faLanguage } from "@fortawesome/free-solid-svg-icons";
-import { faFlag } from "@fortawesome/free-regular-svg-icons";
+import { faLanguage } from "@fortawesome/free-solid-svg-icons";
 import { useGlobalContext } from "../../context/AppProvider";
 import { StaticImage } from "gatsby-plugin-image";
 
@@ -18,7 +17,7 @@ const Navbar = (props: Props) => {
   };
 
   return (
-    <div className="navbar-container sticky">
+    <div className="navbar-container fixed z-40">
       <div className="navbar">
         <div className="logo">
           <div className=" rounded-full overflow-hidden h-8 w-8 bg-txLit2 hover:bg-white active:bg-txLit2 cursor-pointer">
