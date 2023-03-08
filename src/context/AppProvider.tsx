@@ -14,6 +14,13 @@ export const AppProvider = ({ children }: Props) => {
 
   const switchLanguage = () => {
     dispatch({ type: "SWITCH_LANGUAGE" });
+    dispatch({
+      type: "SET_CATEGORY",
+      payload: {
+        category: state.pageLocation.category,
+        page: state.pageLocation.page,
+      },
+    });
   };
 
   const translate = (key1: string, key2: string) => {

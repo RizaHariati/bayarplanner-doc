@@ -29,7 +29,7 @@ const SidebarNavigator = (props: Props) => {
                   }}
                 >
                   <FontAwesomeIcon icon={icon} />
-                  <h3 className="text-left">{title}</h3>
+                  <h3 className="text-left font-medium">{title}</h3>
                 </button>
               </div>
               {content && (
@@ -41,7 +41,7 @@ const SidebarNavigator = (props: Props) => {
                   {Object.keys(content!).map((contentItem, contentIndex) => {
                     return (
                       <button
-                        className="w-full hover:text-txDrk2 active:text-txDrk3 transition-all text-left"
+                        className="w-full hover:text-txDrk1 active:text-txLit2 transition-all text-left font-medium text-txDrk2 capitalize"
                         onClick={() => {
                           setPageLocation(contentItem, item);
                         }}

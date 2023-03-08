@@ -1,115 +1,105 @@
 import { PageDataType } from "../context/types.d";
 export const paymentpage_en: PageDataType = {
   check: {
-    title: "Check Name",
+    title: "Check Payment List",
     list: [
-      { text: "Ketuk tombol username", img: "" },
-      { text: "Masukkan Nama", img: "" },
-      { text: "Pilih Avatar", img: "" },
+      {
+        text: "To see the payment list,first click <span>Payment</span> button on the main menu",
+        img: "",
+      },
+      {
+        text: "On the main calendar you can see the whole list. Pick one of the date of payment list that you are going to pay. If you click on a date with multiple item, you will see payment item list.",
+        img: "",
+      },
+      {
+        text: "If you clik on a date with only one item you will see a Payment for one item form",
+        img: "",
+      },
+      {
+        text: "Ont the side column you will see all the items you haven't pay for a month. If you click <span>Pay</span> button you will see the payment list for that day.",
+        img: "",
+      },
+      {
+        text: "If you click on the button with the price tag, you will see a payment for one item option",
+        img: "",
+      },
     ],
     opening: [
-      "Nama akan digunakan untuk database penyimpanan jadwal. Kalender tidak  bisa digunakan tanpa data ini.",
+      "Payment list is on the Main Calendar and on sidebar, below the small calendar.",
     ],
     closing: [""],
   },
-  payment: {
-    title: "Payment",
+  daypayment: {
+    title: "Payment List Form",
     list: [
       {
-        text: "Pada main menu pilih Kalender",
+        text: "If you want to mark payment on all the items on the list for that day only you can pick the <span>payment date</span> ",
         img: "",
       },
       {
-        text: "Pilih tanggal penjadwalan di kalender. Pilih tanggal kegiatan akan dilakukan sesuai dengan jumlah total yang akan dibayarkan. Tanggal yang bisa dipilih maksimal untuk dua bulan.",
+        text: "And then click <span>Pay All</span>",
         img: "",
       },
       {
-        text: "Masukkan Judul dan keterangan. Judul dan keterangan akan dijadikan satu kategori yang unik dan dapat digunakan lagi saat memasukkan item yang sama.",
-        img: "",
-      },
-      {
-        text: "Masukkan Satuan : jumlah uang yang dijadwalkan akan dterima/dibayar dalam satu hari. Satuan akan otomatis dibagi dengan jumlah hari dari tanggal yang dipilih.",
-        img: "",
-      },
-      {
-        text: "Masukkan Total pembayaran untuk satukali transaksi. Total akan otomatis dipecah dalam satuan hari.",
-        img: "",
-      },
-      {
-        text: "Pilih keluar jika melakukan pembayaran, pilih masuk, jika menerima pembayaran",
-        img: "",
-      },
-      {
-        text: "Pilih tanggal pembayaran, jika sudah dilunasi saat memasukkan penjadwalan. Tanggal yang dapat dipilih maksimal adalah sesuai tanggal yang diklik dalam kalender.",
+        text: "If you're only going to pay one item, click <span>Pay</span> and then it will show you the Payment for One item option",
         img: "",
       },
     ],
     opening: [
-      "Penjadwalan aktivitas transaksi dilakukan dengan&nbsp;<span>satuan harian</span> , bukan satuan item barang. Meski kategori menjadi standar, harga satuan harian bisa disesuaikan",
+      "<span>Payment List Form</span> can be opened by clicking date on Main Calendar or by clicking <span>Pay</span> button on the Sidebar. You can pay items per day or pay just one item by clicking <span>Pay</span> button",
     ],
     closing: [""],
   },
-  invoice: {
-    title: "Edit Data",
+  itempaymentSameID: {
+    title: "Same Registration ID Payment",
     list: [
-      { text: "Di main menu pilih 'Kalender'", img: "" },
       {
-        text: "Dibagian bawah kalender Tekan tombol disebelah item yang akan diedit.",
+        text: "If you want to add more items to pay (under the same Registration ID) click on the date on the top",
         img: "",
       },
       {
-        text: "Anda akan masuk kedaftar list item yang anda bisa edit. Pilih salah dengan menekan tombol 'Edit'",
+        text: "Select the date you want to add",
         img: "",
       },
       {
-        text: "Masukkan Total pembayaran untuk satukali transaksi. Total akan otomatis dipecah dalam satuan hari.",
+        text: "Select payment date",
         img: "",
       },
       {
-        text: "Pilih <span>keluar</span> jika melakukan pembayaran, pilih <span>masuk</span>, jika menerima pembayaran",
-        img: "",
-      },
-      {
-        text: "Pilih tanggal pembayaran, ( hanya ada untuk item yang sudah dilunasi saat memasukkan penjadwalan). Tanggal yang dapat dipilih maksimal adalah sesuai tanggal yang diklik dalam kalender.",
-        img: "",
-      },
-      {
-        text: "Edit Judul atau deskripsi. Deskripsi tidak bisa diubah, tanpa mengubah judul",
-        img: "",
-      },
-      {
-        text: "Edit harga maupun jumlah total. Harga bisa berbeda untuk kategori yang sama.",
-        img: "",
-      },
-      {
-        text: "Edit Kategori untuk seluruh data hanya bisa dilakukan saat judul Edit Kategori untuk seluruh data hanya bisa dilakukan saat judul atau deskripsi berubah.atau deskripsi berubah.",
+        text: "Click <span>Pay</span>",
         img: "",
       },
     ],
-    opening: [
-      " Anda bisa mengedit satu item data dan membuat, atau seluruh data dalam satu kategori。Kategori dibuat otomatis saat anda memasukkan data baru.",
-    ],
+    opening: [""],
     closing: [""],
   },
-  file: {
-    title: "Hapus Data",
+  itempaymentmultiple: {
+    title: "Multiple Item Payment",
     list: [
-      { text: "Di main menu pilih 'Kalender'", img: "" },
       {
-        text: "Dibagian bawah kalender Tekan tombol disebelah data yang akan dihapus.",
+        text: "To pay the <span>whole</span> item under the same registration ID with your selected item, first, select the payment date",
         img: "",
       },
       {
-        text: "List data yang bisa dihapus dalam satu hari. Jika anda ingin menghapus seluruh data yang didaftarkan bersamaan (1 registrasi id) maka klik disebelah data yang akan dihapus",
+        text: "And then click <span>Pay All </span>button",
+      },
+    ],
+    opening: [""],
+    closing: [""],
+  },
+  itempaymentsingle: {
+    title: "Single Item Payment",
+    list: [
+      {
+        text: "To pay the <span>only one</span> item  first, select the payment date",
         img: "",
       },
       {
-        text: "Untuk menghapus data dalam satu hari, klik kotak yang akan dihapus, lalu klik hapus",
-        img: "",
+        text: "And then click <span>Pay </span>button",
       },
     ],
     opening: [
-      "Anda bisa menghapus data dalam satu hari atau data dalam satu kategori",
+      "For Pay Item Option, you can pay for only one selected item, adding more dates to pay or pay the whole items that have the same registriationID with your earlier chosen item",
     ],
     closing: [""],
   },

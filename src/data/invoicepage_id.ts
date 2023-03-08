@@ -1,115 +1,87 @@
 import { PageDataType } from "../context/types.d";
 export const invoicepage_id: PageDataType = {
-  start: {
-    title: "Register Nama",
+  invoicemultiple: {
+    title: "Print multiple data",
     list: [
-      { text: "Ketuk tombol username", img: "" },
-      { text: "Masukkan Nama", img: "" },
-      { text: "Pilih Avatar", img: "" },
-    ],
-    opening: [
-      "Nama akan digunakan untuk database penyimpanan jadwal. Kalender tidak  bisa digunakan tanpa data ini.",
-    ],
-    closing: [""],
-  },
-  payment: {
-    title: "Data Baru",
-    list: [
+      { text: "Pada menu utama, klik tombol <span>Kwitansi</span>", img: "" },
       {
-        text: "Pada main menu pilih Kalender",
+        text: "Di kalender besar akan terlihat seluruh list. Klik tanggal, akan terbuka Daftar multiple kwitansi.",
         img: "",
       },
       {
-        text: "Pilih tanggal penjadwalan di kalender. Pilih tanggal kegiatan akan dilakukan sesuai dengan jumlah total yang akan dibayarkan. Tanggal yang bisa dipilih maksimal untuk dua bulan.",
+        text: "Di kolom sisi jika diklik pada tanggal yang berwarna hijau, di bagian bawah akan ditujukkan list yang akan menunjukkan daftar kegiatan pelunasan atau penerimaan pada tanggal tersebut",
         img: "",
       },
       {
-        text: "Masukkan Judul dan keterangan. Judul dan keterangan akan dijadikan satu kategori yang unik dan dapat digunakan lagi saat memasukkan item yang sama.",
+        text: "Jika di klik pada tombol <span>Print semua</span>, maka akan terbuka Daftar Multiple Kwitansi yang bisa di download",
         img: "",
       },
       {
-        text: "Masukkan Satuan : jumlah uang yang dijadwalkan akan dterima/dibayar dalam satu hari. Satuan akan otomatis dibagi dengan jumlah hari dari tanggal yang dipilih.",
+        text: "Jika ingin menambah jumlah tanggal kwitansi yang akan diprint, maka klik pada tanggal terpilih",
         img: "",
       },
       {
-        text: "Masukkan Total pembayaran untuk satukali transaksi. Total akan otomatis dipecah dalam satuan hari.",
+        text: "Klik kotak disamping item untuk memilih/mengecualikan tanggal yang juga akan diprint",
         img: "",
       },
       {
-        text: "Pilih keluar jika melakukan pembayaran, pilih masuk, jika menerima pembayaran",
+        text: "Klik <span> print semua</span>, akan terlihat print preview list seluruh item yang sudah dipilih. Cek jika ada yang akan ditambah atau dikurangi",
         img: "",
       },
       {
-        text: "Pilih tanggal pembayaran, jika sudah dilunasi saat memasukkan penjadwalan. Tanggal yang dapat dipilih maksimal adalah sesuai tanggal yang diklik dalam kalender.",
+        text: "Klik <span> Print semua</span> lagi, akan terlihat pilihan bentuk output yang bisa dipilih :Jpg, Pdf, Excel. Pilih salah satu",
+        img: "",
+      },
+      {
+        text: "Ubah nama jika diperlukan, lalu tekan <span>OK</span> ",
         img: "",
       },
     ],
     opening: [
-      "Penjadwalan aktivitas transaksi dilakukan dengan&nbsp;<span>satuan harian</span> , bukan satuan item barang. Meski kategori menjadi standar, harga satuan harian bisa disesuaikan",
+      "Seluruh pembayaran beserta dapat dilihat dari Kalender utama, sementara dikolom sisi jadwal bisa di lihat dengan mengklik tanggal",
+      "Kwitansi untuk lebih dari satu item bisa di download dalam bentuk JPEG, Excel atau PDF",
     ],
     closing: [""],
   },
-  invoice: {
-    title: "Edit Data",
+  invoicesingle: {
+    title: "Print single data",
     list: [
       { text: "Di main menu pilih 'Kalender'", img: "" },
       {
-        text: "Dibagian bawah kalender Tekan tombol disebelah item yang akan diedit.",
+        text: "Di kalender besar akan terlihat seluruh list. Klik tanggal, akan terbuka Daftar multiple kwitansi.",
         img: "",
       },
       {
-        text: "Anda akan masuk kedaftar list item yang anda bisa edit. Pilih salah dengan menekan tombol 'Edit'",
+        text: "Hilangkan centang pada kotak disebelah item, sisakan satu",
         img: "",
       },
       {
-        text: "Masukkan Total pembayaran untuk satukali transaksi. Total akan otomatis dipecah dalam satuan hari.",
+        text: "Jika di klik pada tombol <span>Print semua</span>, maka akan terbuka Daftar Single Kwitansi yang bisa di download",
         img: "",
       },
       {
-        text: "Pilih <span>keluar</span> jika melakukan pembayaran, pilih <span>masuk</span>, jika menerima pembayaran",
+        text: "Di kolom sisi jika diklik pada tanggal yang berwarna hijau, di bagian bawah akan ditujukkan list yang akan menunjukkan daftar kegiatan pelunasan atau penerimaan pada tanggal tersebut",
         img: "",
       },
       {
-        text: "Pilih tanggal pembayaran, ( hanya ada untuk item yang sudah dilunasi saat memasukkan penjadwalan). Tanggal yang dapat dipilih maksimal adalah sesuai tanggal yang diklik dalam kalender.",
+        text: "Jika di klik pada tombol <span>ID</span>, maka akan terbuka Daftar Single Kwitansi yang bisa di download",
         img: "",
       },
       {
-        text: "Edit Judul atau deskripsi. Deskripsi tidak bisa diubah, tanpa mengubah judul",
+        text: "Pilih tanggal Print dengan Kalender jika anda ingin menyertakan kalender",
         img: "",
       },
       {
-        text: "Edit harga maupun jumlah total. Harga bisa berbeda untuk kategori yang sama.",
+        text: "Klik <span> Print </span>, akan terlihat pilihan bentuk output yang bisa dipilih :Jpg atau Pdf. Pilih salah satu",
         img: "",
       },
       {
-        text: "Edit Kategori untuk seluruh data hanya bisa dilakukan saat judul Edit Kategori untuk seluruh data hanya bisa dilakukan saat judul atau deskripsi berubah.atau deskripsi berubah.",
+        text: "Ubah nama jika diperlukan, lalu tekan <span>OK</span> ",
         img: "",
       },
     ],
     opening: [
-      " Anda bisa mengedit satu item data dan membuat, atau seluruh data dalam satu kategori。Kategori dibuat otomatis saat anda memasukkan data baru.",
-    ],
-    closing: [""],
-  },
-  file: {
-    title: "Hapus Data",
-    list: [
-      { text: "Di main menu pilih 'Kalender'", img: "" },
-      {
-        text: "Dibagian bawah kalender Tekan tombol disebelah data yang akan dihapus.",
-        img: "",
-      },
-      {
-        text: "List data yang bisa dihapus dalam satu hari. Jika anda ingin menghapus seluruh data yang didaftarkan bersamaan (1 registrasi id) maka klik disebelah data yang akan dihapus",
-        img: "",
-      },
-      {
-        text: "Untuk menghapus data dalam satu hari, klik kotak yang akan dihapus, lalu klik hapus",
-        img: "",
-      },
-    ],
-    opening: [
-      "Anda bisa menghapus data dalam satu hari atau data dalam satu kategori",
+      "Untuk print satu item, print kwitansi bisa disertai dengan kalender jadwal pelaksanaan transaksi tersebut. Print satu item dapat didownload dalam bentuk JPEG atau PDF ",
     ],
     closing: [""],
   },

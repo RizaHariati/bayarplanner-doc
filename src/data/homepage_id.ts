@@ -8,7 +8,7 @@ export const homepage_id: PageDataType = {
       { text: "Pilih Avatar", img: "" },
     ],
     opening: [
-      "Nama akan digunakan untuk database penyimpanan jadwal. Kalender tidak  bisa digunakan tanpa data ini.",
+      "Nama akan digunakan untuk database penyimpanan jadwal. BayarPlanner tidak  bisa digunakan tanpa data ini.",
     ],
     closing: [""],
   },
@@ -16,11 +16,11 @@ export const homepage_id: PageDataType = {
     title: "Data Baru",
     list: [
       {
-        text: "Pada main menu pilih Kalender",
+        text: "Pada main menu pilih <span>Kalender</span>",
         img: "",
       },
       {
-        text: "Pilih tanggal penjadwalan di kalender. Pilih tanggal kegiatan akan dilakukan sesuai dengan jumlah total yang akan dibayarkan. Tanggal yang bisa dipilih maksimal untuk dua bulan.",
+        text: "Ketuk Tanggal di Kalender besar atau pada tanggal di kolom sisi. Pilih tanggal kegiatan akan dilakukan sesuai dengan jumlah total yang akan dibayarkan. Tanggal yang bisa dipilih maksimal untuk dua bulan.",
         img: "",
       },
       {
@@ -45,7 +45,8 @@ export const homepage_id: PageDataType = {
       },
     ],
     opening: [
-      "Penjadwalan aktivitas transaksi dilakukan dengan&nbsp;<span>satuan harian</span> , bukan satuan item barang. Meski kategori menjadi standar, harga satuan harian bisa disesuaikan",
+      "Penjadwalan aktivitas transaksi dilakukan dengan <span>satuan harian</span> , bukan satuan item barang. Misalnya jika anda belanja mingguan, maka jumlah total belanja yang dimasukkan, bukan harga per item belanja.",
+      "Untuk setiap kategori, bisa digunakan untuk harga yang berbeda-beda",
     ],
     closing: [""],
   },
@@ -58,19 +59,12 @@ export const homepage_id: PageDataType = {
         img: "",
       },
       {
-        text: "Anda akan masuk kedaftar list item yang anda bisa edit. Pilih salah dengan menekan tombol 'Edit'",
+        text: "Anda akan masuk kedaftar list item yang anda bisa edit. Pilih salah dengan menekan tombol <span>Edit</span>'",
         img: "",
       },
+
       {
-        text: "Masukkan Total pembayaran untuk satukali transaksi. Total akan otomatis dipecah dalam satuan hari.",
-        img: "",
-      },
-      {
-        text: "Pilih <span>keluar</span> jika melakukan pembayaran, pilih <span>masuk</span>, jika menerima pembayaran",
-        img: "",
-      },
-      {
-        text: "Pilih tanggal pembayaran, ( hanya ada untuk item yang sudah dilunasi saat memasukkan penjadwalan). Tanggal yang dapat dipilih maksimal adalah sesuai tanggal yang diklik dalam kalender.",
+        text: "Jika anda mengedit transaksi yang sudah dilunasi dan jumlah hari lebih dari satu, maka akan ada pilihan untuk menambah tanggal dari item yang sudah diedit. Klik Tambahkan ke registrationID dan pilih tanggal yang ingin anda tambahkan",
         img: "",
       },
       {
@@ -82,12 +76,16 @@ export const homepage_id: PageDataType = {
         img: "",
       },
       {
-        text: "Edit Kategori untuk seluruh data hanya bisa dilakukan saat judul Edit Kategori untuk seluruh data hanya bisa dilakukan saat judul atau deskripsi berubah.atau deskripsi berubah.",
+        text: "Pilihan <span>Edit Kategori untuk seluruh data </span>hanya bisa diklik saat judul Edit Kategori untuk seluruh data hanya bisa dilakukan saat judul dan  deskripsi berubah.",
+        img: "",
+      },
+      {
+        text: "Setelah selesai klik tombol <span>Edit</span>",
         img: "",
       },
     ],
     opening: [
-      " Anda bisa mengedit satu item data dan membuat, atau seluruh data dalam satu kategori。Kategori dibuat otomatis saat anda memasukkan data baru.",
+      " Anda bisa mengedit satu item data saja atau mengubah seluruh data dalam satu kategori。Kategori dibuat otomatis saat anda memasukkan data baru.",
     ],
     closing: [""],
   },
@@ -95,12 +93,17 @@ export const homepage_id: PageDataType = {
     title: "Hapus Data",
     list: [
       { text: "Di main menu pilih 'Kalender'", img: "" },
+
       {
-        text: "Dibagian bawah kalender Tekan tombol disebelah data yang akan dihapus.",
+        text: "Di kolom sisi  bagian bawah kalender Tekan tombol disebelah data yang akan dihapus.",
         img: "",
       },
       {
-        text: "List data yang bisa dihapus dalam satu hari. Jika anda ingin menghapus seluruh data yang didaftarkan bersamaan (1 registrasi id) maka klik disebelah data yang akan dihapus",
+        text: "Dapat dilihat List data yang bisa dihapus dalam satu hari. Anda bisa klik box disebelah item yang anda ingin hapus untuk memilihnya. ",
+        img: "",
+      },
+      {
+        text: "Jika anda ingin menghapus seluruh data yang didaftarkan bersamaan (memiliki registrasi id yang sama) maka klik tombol <span>Semua</span>",
         img: "",
       },
       {
@@ -108,9 +111,7 @@ export const homepage_id: PageDataType = {
         img: "",
       },
     ],
-    opening: [
-      "Anda bisa menghapus data dalam satu hari atau data dalam satu kategori",
-    ],
+    opening: ["Anda bisa menghapus data per satu hari atau data per kategori"],
     closing: [""],
   },
 };

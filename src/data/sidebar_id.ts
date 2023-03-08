@@ -19,7 +19,7 @@ export const sidebar_id: SidebarType = {
   },
 
   start: {
-    title: "Mulai Merencanakan",
+    title: "Mulai Jadwal",
     link: "/start/",
     icon: faFlag,
     content: {
@@ -38,14 +38,14 @@ export const sidebar_id: SidebarType = {
     link: "/payment/",
     icon: faCoins,
     content: {
-      check: "Daftar Pembayaran",
-      payment: "Pembayaran",
-      invoice: "Kwitansi",
-      file: "Manajemen File",
+      check: "Lihat Daftar Pembayaran",
+      daypayment: "Daftar belum dibayar",
+      itempaymentSameID: "Pembayaran Registrasi ID Sama",
+      itempaymentmultiple: "Pembayaran Beberapa Item",
+      itempaymentsingle: "Pembayaran Satu Item",
     },
     opening: [
-      "Semua data akan disimpan sementara didalam browser. Setelah pemakaian data harus disimpan kedalam hardisk, atau data akan dihapus dari browser. Ini sengaja dilakukan agar semua data berada dalam kendali Anda.",
-      "Anda bisa menghapus semua data dalam browser, tapi untuk data yang sudah didownload, harus anda hapus secara manual dari komputer atau ponsel anda.",
+      "Daftar pembayaran berisi seluruh transaksi yang sudah dijadwalkan tapi belum dilunasi atau ditagih. Saat jadwal berwarna merah, artinya sudah terlambat dan harus segera dilunasi atau ditagih.",
     ],
   },
 
@@ -54,14 +54,11 @@ export const sidebar_id: SidebarType = {
     link: "/invoice/",
     icon: faBook,
     content: {
-      start: "Mulai",
-      payment: "Pembayaran",
-      invoice: "Kwitansi",
-      file: "Manajemen File",
+      invoicemultiple: "Print multiple data",
+      invoicesingle: "Print single data",
     },
     opening: [
-      "Penanggalan Kwitansi didasarkan pada tanggal pembayaran",
-      "Kwitansi bisa download dalam bentuk JPG, atau PDF dan excel, untuk lebih dari satu item",
+      "Kalender Kwitansi didasarkan pada tanggal pembayaran, sehingga berbeda dengan penanggalan yang ada di dalam Kalender utama.",
     ],
   },
 
@@ -70,10 +67,10 @@ export const sidebar_id: SidebarType = {
     link: "/file/",
     icon: faFile,
     content: {
-      start: "File name",
-      payment: "look at fie",
-      invoice: "Kwitansi",
-      file: "Manajemen File",
+      uploadingData: "Upload Data",
+      savingData: "Simpan Data",
+      clearingData: "Bersihkan Data Browser",
+      addData: "Tambahkan Data Lain",
     },
     opening: [
       "Semua data akan disimpan sementara didalam browser. Setelah pemakaian data harus disimpan kedalam hardisk, atau data akan dihapus dari browser. Ini sengaja dilakukan agar semua data berada dalam kendali Anda.",

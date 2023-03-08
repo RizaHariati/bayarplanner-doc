@@ -19,7 +19,7 @@ const PageContent = ({ id }: Props) => {
         <div className="mb-2 pb-2 border-b w-full" id={id}>
           <h2>{pageContent[id].title} </h2>
 
-          <div className="bg-blue-100">
+          <div className=" bg-mainDrkActive bg-opacity-10">
             {pageContent[id].opening!.map((item, index: number) => {
               return <p key={index}>{HTMLReactParser(item)}</p>;
             })}

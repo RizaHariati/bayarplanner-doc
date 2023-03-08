@@ -39,30 +39,26 @@ export const sidebar_en: SidebarType = {
     link: "/payment/",
     icon: faCoins,
     content: {
-      check: "Payment List",
-      payment: "Pembayaran",
-      invoice: "Kwitansi",
-      file: "Manajemen File",
+      check: "Check Payment List",
+      daypayment: "Payment List",
+      itempaymentSameID: "Same Registration ID Payment",
+      itempaymentmultiple: "Multiple Item Payment",
+      itempaymentsingle: "Single Item Payment",
     },
     opening: [
-      "BayarPlanner was made to help you record your financial transactions and arrange your schedule based on those transactions. Therefore the smallest unit ini this app is day instead of product item.",
-      "Hope this app helps you manage your life better!",
+      "Payment list consists of all of the scheduled transactions that haven't got paid. When the schedule's color is red, that means it's already behind schedule",
     ],
   },
-
   invoice: {
     title: "Invoice",
     link: "/invoice/",
     icon: faBook,
     content: {
-      start: "Mulai",
-      payment: "Pembayaran",
-      invoice: "Kwitansi",
-      file: "Manajemen File",
+      invoicemultiple: "Print multiple data",
+      invoicesingle: "Print single data",
     },
     opening: [
-      "Invoice calendar is based on your payment date.",
-      "Invoice can be downloaded in JPG form, and form more than one items can also be downloaded in PDF or excel ",
+      "Invoice calendar is based on your payment date. So it can be different from your Schedule and Payment Calendar ",
     ],
   },
 
@@ -71,14 +67,14 @@ export const sidebar_en: SidebarType = {
     link: "/file/",
     icon: faFile,
     content: {
-      start: "File name",
-      payment: "Look at file",
-      invoice: "Kwitansi",
-      file: "Manajemen File",
+      uploadingData: "Uploading Data",
+      savingData: "Saving Data",
+      clearingData: "Clean Data Browser",
+      addData: "Add other data",
     },
     opening: [
-      "BayarPlanner was made to help you record your financial transactions and arrange your schedule based on those transactions. Therefore the smallest unit ini this app is day instead of product item.",
-      "Hope this app helps you manage your life better!",
+      "All of the data will be temporarily saved on your browser. After editing you should save it to your hard drive or there's a big chance it will be deleted from your browser. This is by design so your data can be secured",
+      "You can delete the data from your browser, but to clean your hard drive, you have to do it manually.",
     ],
   },
 };

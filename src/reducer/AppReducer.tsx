@@ -7,6 +7,9 @@ import { homepage_en } from "../data/homepage_en";
 import { invoicepage_id } from "../data/invoicepage_id";
 import { paymentpage_id } from "../data/paymentpage_id";
 import { filepage_id } from "../data/filepage_id";
+import { invoicepage_en } from "../data/invoicepage_en";
+import { paymentpage_en } from "../data/paymentpage_en";
+import { filepage_en } from "../data/filepage_en";
 
 interface OpenModalAction {
   type: string;
@@ -29,17 +32,16 @@ export const appReducer = (state: AppState, action: OpenModalAction) => {
   }
   if (action.type === "SET_CATEGORY") {
     const { category, page } = action.payload;
-    let pageContent = state.homepageContent;
-    if (!category) {
-      if (page === "payment") {
-        pageContent = state.paymentContent;
-      } else if (page === "invoice") {
-        pageContent = state.invoiceContent;
-      } else if (page === "start") {
-        pageContent = state.homepageContent;
-      } else {
-        pageContent = state.fileContent;
-      }
+    let pageContent = state.pageContent;
+
+    if (page === "payment") {
+      pageContent = state.paymentContent;
+    } else if (page === "invoice") {
+      pageContent = state.invoiceContent;
+    } else if (page === "start") {
+      pageContent = state.homepageContent;
+    } else {
+      pageContent = state.fileContent;
     }
     return {
       ...state,
@@ -55,12 +57,12 @@ export const appReducer = (state: AppState, action: OpenModalAction) => {
     let paymentContent: PageDataType = paymentpage_id;
     let fileContent: PageDataType = filepage_id;
 
-    if (state.language === "id") {
+    if (language === "en") {
       sidebarContent = sidebar_en;
       homepageContent = homepage_en;
-      invoiceContent = homepage_en;
-      paymentContent = homepage_en;
-      fileContent = homepage_en;
+      invoiceContent = invoicepage_en;
+      paymentContent = paymentpage_en;
+      fileContent = filepage_en;
     }
 
     return {
@@ -68,6 +70,9 @@ export const appReducer = (state: AppState, action: OpenModalAction) => {
       language,
       sidebarContent,
       homepageContent,
+      invoiceContent,
+      paymentContent,
+      fileContent,
     };
   }
   return state;

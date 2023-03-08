@@ -12,24 +12,34 @@ const PageBase = (props: Props) => {
     },
   } = useGlobalContext();
 
-  const ref: React.LegacyRef<HTMLDivElement> | undefined = useRef(null);
+  // const ref: React.LegacyRef<HTMLDivElement> | undefined = useRef(null);
   useEffect(() => {
     // console.log(Object.values(ref.current!.lastElementChild!.children));
+
     const divElement = document.getElementById(`page${page}`)!;
-    for (
-      let index = 0;
-      index < divElement.lastElementChild!.children.length;
-      index++
-    ) {
-      const element = divElement?.lastElementChild!.children[index];
-      if (element.getAttribute("id") === category) {
-        element.scrollIntoView({
-          block: "nearest",
-          behavior: "smooth",
-        });
+
+    if (category !== "") {
+      for (
+        let index = 0;
+        index < divElement.lastElementChild!.children.length;
+        index++
+      ) {
+        const element = divElement?.lastElementChild!.children[index];
+        if (element.getAttribute("id") === category) {
+          element.scrollIntoView({
+            block: "nearest",
+          });
+        }
       }
+    } else {
+      setTimeout(() => {
+        divElement.firstElementChild?.scrollIntoView({
+          block: "nearest",
+        });
+      }, 50);
     }
   }, [category, page]);
+
   if (!sidebarContent || Object.keys(sidebarContent).length < 1)
     return (
       <div>
@@ -42,12 +52,8 @@ const PageBase = (props: Props) => {
       Object.keys(sidebarContent[page].content!).length > 0
     ) {
       return (
-        <div
-          className="w-full overflow-y-scroll pb-20 h-screen scroll-smooth"
-          ref={ref}
-          id={`page${page}`}
-        >
-          <h1>{sidebarContent[page].title!}</h1>
+        <div className="page-base-container " id={`page${page}`}>
+          <h1 className="pt-5">{sidebarContent[page]!.title!}</h1>
           <div>
             {sidebarContent[page].opening?.map((item, index) => {
               return <p key={index}>{item}</p>;

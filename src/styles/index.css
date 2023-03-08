@@ -62,7 +62,7 @@
   }
 
   .sidebar-container {
-    @apply col-span-3 w-full h-full border-r border-borderColor flex flex-col items-start justify-between pt-3 pb-12;
+    @apply col-span-3 w-full h-full border-r border-borderColor flex flex-col items-start justify-between pb-12;
   }
   .index-btn-group {
     @apply h-32 w-full grid grid-cols-4 gap-3 mt-10;
@@ -72,5 +72,13 @@
   }
   .logo {
     @apply flex gap-2 items-center justify-start;
+  }
+
+  .page-base-container {
+    @apply w-full overflow-y-scroll pb-20 h-screen scroll-smooth;
+  }
+
+  .page-base-container::-webkit-scrollbar {
+    display: none;
   }
 }
