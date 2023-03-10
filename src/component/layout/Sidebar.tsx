@@ -27,10 +27,13 @@ const SidebarSlide = ({ pathname }: SideProps) => {
   const { slide } = useGlobalContext();
   return (
     <div
-      className="sidebar-slide-container "
+      className="h-screen flex flex-col bg-fillLit fixed z-20 w-full top-0 sm:hidden transition-all"
       style={slide ? { left: "0%" } : { left: "-100%" }}
     >
-      <SidebarContent pathname={pathname} />
+      <div className=" h-16"></div>
+      <div className="sidebar-slide-container ">
+        <SidebarContent pathname={pathname} />
+      </div>
     </div>
   );
 };
@@ -39,8 +42,11 @@ type SideIcons = { pathname: string };
 const SidebarIcons = ({ pathname }: SideIcons) => {
   const { slideOut } = useGlobalContext();
   return (
-    <div className="sidebar-icons-container" onClick={() => slideOut()}>
-      <SidebarContent pathname={pathname} />
+    <div className="h-screen flex flex-col fixed z-30 w-9 top-0 left-0 sm:hidden bg-fillLit ">
+      <div className=" h-16"></div>
+      <div className="sidebar-icons-content" onClick={() => slideOut()}>
+        <SidebarContent pathname={pathname} />
+      </div>
     </div>
   );
 };

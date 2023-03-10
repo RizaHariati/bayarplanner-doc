@@ -17,7 +17,7 @@ const Navbar = (props: Props) => {
   };
 
   return (
-    <div className="navbar-container fixed z-40 ">
+    <div className="navbar-container absolute top-0 ">
       <div className="navbar">
         <div className="logo">
           <div className=" rounded-full overflow-hidden h-8 w-8 bg-txLit2 hover:bg-white active:bg-txLit2 cursor-pointer">

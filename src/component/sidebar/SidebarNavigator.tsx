@@ -15,22 +15,25 @@ const SidebarNavigator = ({ pathname }: Props) => {
     );
   } else {
     return (
-      <div className="sidebar-container  ">
-        <SidebarContent pathname={pathname} />
-        <div className="text-sm text-center  flex-col leading-4 hidden sm:flex">
-          <a
-            className="text-mainDrk hover:font-bold transition-all"
-            href="https://www.freepik.com/free-vector/hand-drawn-flat-design-salam-illustration_22640873.htm#query=hijab&position=49&from_view=search&track=sph"
-          >
-            Image byFreepik
-          </a>
-          <a
-            href="https://www.ichacodes.com/"
-            className="text-mainDrk hover:font-bold transition-all underline hover:text-mainDrkHover"
-          >
-            Bayarplanner by Riza Hariati for IchaCodes copyright &copy;
-            {new Date().getFullYear()}
-          </a>
+      <div className="flex flex-col  w-full col-span-1 sm:col-span-4 lg:col-span-3 sm: border-r sm:border-mainDrk ">
+        <div className="h-2"></div>
+        <div className="sidebar-container  ">
+          <SidebarContent pathname={pathname} />
+          <div className="text-sm text-center  flex-col leading-4 hidden sm:flex">
+            <a
+              className="text-mainDrk hover:font-bold transition-all"
+              href="https://www.freepik.com/free-vector/hand-drawn-flat-design-salam-illustration_22640873.htm#query=hijab&position=49&from_view=search&track=sph"
+            >
+              Image byFreepik
+            </a>
+            <a
+              href="https://www.ichacodes.com/"
+              className="text-mainDrk hover:font-bold transition-all underline hover:text-mainDrkHover"
+            >
+              Bayarplanner by Riza Hariati for IchaCodes copyright &copy;
+              {new Date().getFullYear()}
+            </a>
+          </div>
         </div>
       </div>
     );

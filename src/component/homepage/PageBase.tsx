@@ -28,7 +28,8 @@ const PageBase = (props: Props) => {
         const element = divElement?.lastElementChild!.children[index];
         if (element.getAttribute("id") === category) {
           element.scrollIntoView({
-            block: "nearest",
+            block: "start",
+            behavior: "smooth",
           });
         }
       }
