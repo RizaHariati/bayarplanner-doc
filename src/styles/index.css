@@ -17,22 +17,22 @@
 
 @layer base {
   body {
-    @apply text-txDrk1;
+    @apply text-txDrk1 w-full h-screen relative;
   }
   h1 {
-    @apply capitalize text-3xl font-semibold text-mainDrk mb-2;
+    @apply capitalize text-3xl font-semibold font-montserrat text-mainDrk mb-2;
   }
   h2 {
-    @apply capitalize text-xl font-semibold text-mainDrk my-1;
+    @apply capitalize text-xl font-semibold font-montserrat text-mainDrk my-1;
   }
   h3 {
-    @apply text-lg font-opensans font-medium text-mainDrk;
+    @apply text-lg font-montserrat font-medium text-mainDrk;
   }
   h4 {
-    @apply capitalize text-base font-opensans font-medium;
+    @apply capitalize text-base font-montserrat font-medium;
   }
   h5 {
-    @apply capitalize text-base font-opensans font-normal;
+    @apply capitalize text-base font-montserrat font-normal;
   }
   li > span {
     @apply font-bold;
@@ -61,24 +61,49 @@
     @apply flex items-center justify-between gap-2 border border-txLit1 rounded-md bg-fillDrk bg-opacity-0 hover:bg-opacity-30 cursor-pointer active:bg-opacity-70 p-1 px-3 transition-all w-32 text-center;
   }
 
-  .sidebar-container {
-    @apply col-span-3 w-full h-full border-r border-borderColor flex flex-col items-start justify-between pb-12;
-  }
   .index-btn-group {
-    @apply h-32 w-full grid grid-cols-4 gap-3 mt-10;
+    @apply h-20 w-full grid  grid-cols-1 md:grid-cols-2 gap-3 mt-5;
   }
   .index-btn {
-    @apply w-full border h-full border-mainDrk hover:border-mainMed active:border-mainDrkHover transition-all rounded-md shadow-sm hover:shadow-md uppercase font-bold text-lg m-auto flex flex-col items-center justify-start text-mainDrk hover:text-mainMed active:text-mainDrkHover active:bg-txLit1 hover:bg-txLit2 text-center p-3 pt-7 gap-3;
+    @apply w-full border h-full border-mainDrk hover:border-mainMed active:border-mainDrkHover transition-all rounded-md shadow-sm hover:shadow-md uppercase font-bold text-lg m-auto flex flex-col items-center justify-start text-mainDrk hover:text-mainMed active:text-mainDrkHover active:bg-txLit1 hover:bg-txLit2 text-center p-3  gap-3;
   }
   .logo {
     @apply flex gap-2 items-center justify-start;
   }
-
+  .page-container {
+    @apply col-start-2 sm:col-start-5 lg:col-start-4 col-span-11  sm:col-span-8 lg:col-span-9 w-full h-full px-3 overflow-y-hidden pb-20;
+  }
   .page-base-container {
     @apply w-full overflow-y-scroll pb-20 h-screen scroll-smooth;
   }
 
   .page-base-container::-webkit-scrollbar {
     display: none;
+  }
+  .page-opening {
+    @apply w-full;
+  }
+  .page-opening > p > span {
+    @apply font-bold;
+  }
+
+  .sidebar-controller {
+    @apply grid grid-cols-12 w-full h-full pt-12;
+  }
+
+  .sidebar-container {
+    @apply col-span-1 sm:col-span-4 lg:col-span-3 w-full h-full border-r border-borderColor flex-col items-start justify-between pb-12 hidden sm:flex pt-2;
+  }
+  .sidebar-content {
+    @apply grid grid-cols-12 w-screen sm:w-full overflow-hidden;
+  }
+  .sidebar-title {
+    @apply text-left font-medium w-0 overflow-hidden transition-all;
+  }
+  .sidebar-slide-container {
+    @apply absolute z-20 h-screen overflow-hidden top-0 pt-16 bg-fillLit w-full transition-all px-2 sm:hidden;
+  }
+  .sidebar-icons-container {
+    @apply absolute z-30 h-screen  overflow-hidden top-0 pt-16 bg-fillLit  w-9 border-r border-mainDrk left-0 px-2 sm:hidden;
   }
 }

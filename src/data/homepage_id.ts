@@ -3,9 +3,10 @@ export const homepage_id: PageDataType = {
   register: {
     title: "Register Nama",
     list: [
-      { text: "Ketuk tombol username", img: "" },
+      { text: "Klik tombol <span>username</span> ", img: "" },
       { text: "Masukkan Nama", img: "" },
-      { text: "Pilih Avatar", img: "" },
+      { text: "Pilih Avatar dengan meng klik gambar yang tersedia", img: "" },
+      { text: "Klik tombol <span>Daftar</span>", img: "" },
     ],
     opening: [
       "Nama akan digunakan untuk database penyimpanan jadwal. BayarPlanner tidak  bisa digunakan tanpa data ini.",

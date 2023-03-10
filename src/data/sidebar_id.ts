@@ -73,7 +73,7 @@ export const sidebar_id: SidebarType = {
       addData: "Tambahkan Data Lain",
     },
     opening: [
-      "Semua data akan disimpan sementara didalam browser. Setelah pemakaian data harus disimpan kedalam hardisk, atau data akan dihapus dari browser. Ini sengaja dilakukan agar semua data berada dalam kendali Anda.",
+      "Semua data akan disimpan sementara didalam browser. Setelah pemakaian <span>data harus disimpan kedalam hardisk</span>, atau data akan dihapus dari browser. Ini sengaja dilakukan agar semua data berada dalam kendali Anda.",
       "Anda bisa menghapus semua data dalam browser, tapi untuk data yang sudah didownload, harus anda hapus secara manual dari komputer atau ponsel anda.",
     ],
   },

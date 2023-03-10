@@ -5,7 +5,10 @@ export const homepage_en: PageDataType = {
     list: [
       { text: "Click username button", img: "" },
       { text: "Enter your name", img: "" },
-      { text: "Choose your avatar", img: "" },
+      {
+        text: "Choose new avatar by selecting one of the pictures available",
+        img: "",
+      },
     ],
     opening: [
       "Your name will be used as your database filename. Bayarplanner can't be used without it",

@@ -20,7 +20,7 @@ const Payment = ({ location: { pathname } }: PageProps) => {
   if (pathname !== "/" + page + "/") return <div></div>;
   else {
     return (
-      <Sidebar>
+      <Sidebar pathname={pathname}>
         <PageBase />
       </Sidebar>
     );

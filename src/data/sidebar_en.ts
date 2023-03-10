@@ -73,7 +73,7 @@ export const sidebar_en: SidebarType = {
       addData: "Add other data",
     },
     opening: [
-      "All of the data will be temporarily saved on your browser. After editing you should save it to your hard drive or there's a big chance it will be deleted from your browser. This is by design so your data can be secured",
+      "All of the data will be temporarily saved on your browser. After editing you should <span>save your data to your hard drive</span> or there's a big chance it will be deleted from your browser. This is by design so your data can be secured",
       "You can delete the data from your browser, but to clean your hard drive, you have to do it manually.",
     ],
   },

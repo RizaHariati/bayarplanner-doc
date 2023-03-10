@@ -1,13 +1,18 @@
 import * as React from "react";
-import { Link, HeadFC, PageProps } from "gatsby";
+import { HeadFC, PageProps } from "gatsby";
 import Layout from "../component/layout/Layout";
+import Sidebar from "../component/layout/Sidebar";
 
-const NotFoundPage: React.FC<PageProps> = () => {
+const NotFoundPage: React.FC<PageProps> = ({
+  location: { pathname },
+}: PageProps) => {
   return (
     <Layout>
-      <div className="h-screen w-full flex items-center justify-center">
-        <h2>Page not found - error 404</h2>
-      </div>
+      <Sidebar pathname={pathname}>
+        <div className="h-screen w-full flex items-center justify-center">
+          <h2>Page not found - error 404</h2>
+        </div>
+      </Sidebar>
     </Layout>
   );
 };

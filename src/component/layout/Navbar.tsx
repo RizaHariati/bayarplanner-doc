@@ -17,7 +17,7 @@ const Navbar = (props: Props) => {
   };
 
   return (
-    <div className="navbar-container fixed z-40">
+    <div className="navbar-container fixed z-40 ">
       <div className="navbar">
         <div className="logo">
           <div className=" rounded-full overflow-hidden h-8 w-8 bg-txLit2 hover:bg-white active:bg-txLit2 cursor-pointer">
@@ -25,6 +25,8 @@ const Navbar = (props: Props) => {
               src="../../images/bayarplanner-logo.png"
               alt="bayarplanner-logo"
               className="h-full"
+              placeholder="dominantColor"
+              loading="eager"
             />
           </div>
           <a
@@ -32,7 +34,7 @@ const Navbar = (props: Props) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h3 className=" cursor-pointer text-txLit1 hover:text-white transition-all active:text-txLit2">
+            <h3 className=" hidden sm:block cursor-pointer text-txLit1 hover:text-white transition-all active:text-txLit2">
               {translate("titles", "webtitle")}
             </h3>
           </a>

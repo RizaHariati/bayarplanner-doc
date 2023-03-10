@@ -1,3 +1,4 @@
+import HTMLReactParser from "html-react-parser";
 import React, { useEffect, useRef } from "react";
 import { useGlobalContext } from "../../context/AppProvider";
 import PageContent from "./PageContent";
@@ -52,11 +53,11 @@ const PageBase = (props: Props) => {
       Object.keys(sidebarContent[page].content!).length > 0
     ) {
       return (
-        <div className="page-base-container " id={`page${page}`}>
+        <div className="page-base-container  " id={`page${page}`}>
           <h1 className="pt-5">{sidebarContent[page]!.title!}</h1>
-          <div>
+          <div className="page-opening">
             {sidebarContent[page].opening?.map((item, index) => {
-              return <p key={index}>{item}</p>;
+              return <p key={index}>{HTMLReactParser(item)}</p>;
             })}
           </div>
           <div className="h-fit">

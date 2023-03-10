@@ -1,5 +1,5 @@
 import { navigate, PageProps } from "gatsby";
-import React, { useContext, useEffect, useReducer } from "react";
+import React, { useContext, useState, useReducer } from "react";
 import { appReducer } from "../reducer/AppReducer";
 import { AppContext } from "./AppContext";
 import { initialState } from "./initialstate";
@@ -11,7 +11,7 @@ interface Props {
 
 export const AppProvider = ({ children }: Props) => {
   const [state, dispatch] = useReducer(appReducer, initialState);
-
+  const [slide, setSlide] = useState(false);
   const switchLanguage = () => {
     dispatch({ type: "SWITCH_LANGUAGE" });
     dispatch({
@@ -23,6 +23,12 @@ export const AppProvider = ({ children }: Props) => {
     });
   };
 
+  const slideOut = () => {
+    setSlide(true);
+  };
+  const slideIn = () => {
+    setSlide(false);
+  };
   const translate = (key1: string, key2: string) => {
     let language = state.language;
 
@@ -48,6 +54,7 @@ export const AppProvider = ({ children }: Props) => {
   };
 
   const setPageLocation = (category: string, page: string) => {
+    slideIn();
     dispatch({
       type: "SET_CATEGORY",
       payload: { category, page },
@@ -61,6 +68,9 @@ export const AppProvider = ({ children }: Props) => {
     translate,
     switchLanguage,
     setPageLocation,
+    slide,
+    slideOut,
+    slideIn,
   };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
