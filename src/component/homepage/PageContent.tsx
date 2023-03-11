@@ -1,14 +1,18 @@
 import React from "react";
 import { useGlobalContext } from "../../context/AppProvider";
 import HTMLReactParser from "html-react-parser";
+import { ImageImportType } from "../../context/types.d";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 type Props = {
   id: string;
+  imageList: ImageImportType[] | undefined;
 };
 
-const PageContent = ({ id }: Props) => {
+const PageContent = ({ id, imageList }: Props) => {
+  console.log({ imageList });
   const {
-    state: { pageContent },
+    state: { pageContent, language },
   } = useGlobalContext();
 
   if (!pageContent[id] || Object.keys(pageContent[id]).length < 1) {
@@ -26,13 +30,45 @@ const PageContent = ({ id }: Props) => {
           </div>
 
           <div>
-            <ul className=" list-disc list-inside">
+            <div className=" ">
               {pageContent[id].list.map(
                 (value: { text: string; img?: string }, index: number) => {
-                  return <li key={index}>{HTMLReactParser(value.text)}</li>;
+                  let imageFind = null;
+                  // const imageFind = imageList.find(
+                  //   (item) => parseInt(item.title.split("-")[2]) === index
+                  // );
+                  console.log(id);
+                  if (imageList && imageList.length > 0) {
+                    imageFind = imageList.find((item: ImageImportType) => {
+                      if (id === "map") {
+                        return item.title.split("-")[2] === language;
+                      } else {
+                        return (
+                          item.title.split("-")[2] === (index + 1).toString()
+                        );
+                      }
+                    });
+                  }
+                  return (
+                    <div key={index} className="w-full list-outside list-item">
+                      <p>{HTMLReactParser(value.text)}</p>
+                      {imageFind && (
+                        <div className="w-full object-cover object-center max-w-md mx-auto mb-2 rounded-md overflow-hidden border">
+                          <GatsbyImage
+                            image={getImage(imageFind!.gatsbyImageData!)!}
+                            alt={imageFind.title}
+                            objectPosition="center"
+                            objectFit="cover"
+                            style={{ width: "100%" }}
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  );
                 }
               )}
-            </ul>
+            </div>
           </div>
         </div>
       );

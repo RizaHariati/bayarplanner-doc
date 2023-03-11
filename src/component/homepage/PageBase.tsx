@@ -1,11 +1,15 @@
+import { GatsbyImageProps } from "gatsby-plugin-image";
 import HTMLReactParser from "html-react-parser";
 import React, { useEffect, useRef } from "react";
 import { useGlobalContext } from "../../context/AppProvider";
+import { ContentfulImageType, ImageImportType } from "../../context/types.d";
 import PageContent from "./PageContent";
 
-type Props = {};
+type Props = {
+  contentfulImage?: ContentfulImageType[];
+};
 
-const PageBase = (props: Props) => {
+const PageBase = ({ contentfulImage }: Props) => {
   const {
     state: {
       sidebarContent,
@@ -64,7 +68,17 @@ const PageBase = (props: Props) => {
           <div className="h-fit">
             {Object.keys(sidebarContent[page].content!).map(
               (item: string, index: number) => {
-                return <PageContent key={index} id={item} />;
+                const imageList: ImageImportType[] | undefined = contentfulImage
+                  ?.filter((itemImage) => itemImage.category === item)
+                  .map((itemImage) => {
+                    return {
+                      title: itemImage.image.title,
+                      gatsbyImageData: itemImage.image.gatsbyImageData,
+                    };
+                  });
+                return (
+                  <PageContent key={index} id={item} imageList={imageList} />
+                );
               }
             )}
           </div>

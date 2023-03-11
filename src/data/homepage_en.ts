@@ -1,5 +1,13 @@
 import { PageDataType } from "../context/types.d";
 export const homepage_en: PageDataType = {
+  map: {
+    title: "Main Map",
+    list: [{ text: "", img: "" }],
+    opening: [
+      "BayarPlanner has two main area : Main Calendar and Sidebar. In phone browser,Main Calendar's functions will be integrated to Sidebar",
+    ],
+    closing: [""],
+  },
   register: {
     title: "Register Name",
     list: [

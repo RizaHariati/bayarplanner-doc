@@ -1,6 +1,6 @@
 import { IconDefinition, IconProp } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIconProps } from "@fortawesome/react-fontawesome";
-import { IGatsbyImageData } from "gatsby-plugin-image";
+import { GatsbyImageProps, IGatsbyImageData } from "gatsby-plugin-image";
 
 export type ProjectType = {
   id: string;
@@ -57,4 +57,13 @@ export type PageDataContentType = {
 };
 export type PageDataType = {
   [key: string]: PageDataContentType;
+};
+
+export type ImageImportType = {
+  title: string;
+  gatsbyImageData: IGatsbyImageData;
+};
+export type ContentfulImageType = {
+  category: string;
+  image: ImageImportType;
 };

@@ -23,6 +23,7 @@ export const sidebar_en: SidebarType = {
     link: "/start/",
     icon: faFlag,
     content: {
+      map: "map",
       register: "Register Name",
       input: "New Data",
       edit: "Edit Data",

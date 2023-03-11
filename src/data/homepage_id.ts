@@ -1,5 +1,13 @@
 import { PageDataType } from "../context/types.d";
 export const homepage_id: PageDataType = {
+  map: {
+    title: "Main Map",
+    list: [{ text: "", img: "" }],
+    opening: [
+      "BayarPlanner terbagi atas dua bagian utama : Kalender utama dan Kolom sisi. Pada browser telefon, Kalender utama ditiadakan dan semua fungsi diletakkan di kolom sisi.",
+    ],
+    closing: [""],
+  },
   register: {
     title: "Register Nama",
     list: [
