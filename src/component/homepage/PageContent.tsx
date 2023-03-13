@@ -10,7 +10,6 @@ type Props = {
 };
 
 const PageContent = ({ id, imageList }: Props) => {
-  console.log({ imageList });
   const {
     state: { pageContent, language },
   } = useGlobalContext();
@@ -23,7 +22,7 @@ const PageContent = ({ id, imageList }: Props) => {
         <div className="mb-2 pb-2 border-b w-full" id={id}>
           <h2>{pageContent[id].title} </h2>
 
-          <div className=" bg-mainDrkActive bg-opacity-10">
+          <div className=" bg-mainDrkActive bg-opacity-10 mb-2">
             {pageContent[id].opening!.map((item, index: number) => {
               return <p key={index}>{HTMLReactParser(item)}</p>;
             })}
@@ -34,10 +33,7 @@ const PageContent = ({ id, imageList }: Props) => {
               {pageContent[id].list.map(
                 (value: { text: string; img?: string }, index: number) => {
                   let imageFind = null;
-                  // const imageFind = imageList.find(
-                  //   (item) => parseInt(item.title.split("-")[2]) === index
-                  // );
-                  console.log(id);
+
                   if (imageList && imageList.length > 0) {
                     imageFind = imageList.find((item: ImageImportType) => {
                       if (id === "map") {
@@ -49,14 +45,17 @@ const PageContent = ({ id, imageList }: Props) => {
                       }
                     });
                   }
+
                   return (
-                    <div key={index} className="w-full list-outside list-item">
-                      <p>{HTMLReactParser(value.text)}</p>
+                    <div key={index} className="w-full ">
+                      <p className="w-full list-item list-circle list-outside">
+                        &#9900;&nbsp;&nbsp;{HTMLReactParser(value.text)}
+                      </p>
                       {imageFind && (
-                        <div className="w-full object-cover object-center max-w-md mx-auto mb-2 rounded-md overflow-hidden border">
+                        <div className="w-full object-cover object-center max-w-md mx-auto mb-2 rounded-md overflow-hidden border shadow-md">
                           <GatsbyImage
                             image={getImage(imageFind!.gatsbyImageData!)!}
-                            alt={imageFind.title}
+                            alt={imageFind?.title || "bayarplanner"}
                             objectPosition="center"
                             objectFit="cover"
                             style={{ width: "100%" }}

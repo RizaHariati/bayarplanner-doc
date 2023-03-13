@@ -11,16 +11,25 @@ export const paymentpage_id: PageDataType = {
         text: "Di kalender besar akan terlihat seluruh list, klik salah satu tanggal dan akan terbuka detail item yang harus dibayar. Jika klik tanggal berisi lebih dari satu item akan terbuka Daftar belum dibayar.",
         img: "",
       },
-      {
-        text: "Jika tanggal di Kalender besar berisi satu item diklik akan terbuka pilihan Pembayaran Satu Item",
-        img: "",
-      },
+
       {
         text: "Di kolom sisi terlihat daftar belum dibayar. Jika klik tombol <span>bayar</span> akan terbuka Daftar belum dibayar untuk hari itu",
         img: "",
       },
       {
+        text: "Lanjutkan ke <span>Daftar belum dibayar</span>",
+        img: "",
+      },
+      {
+        text: "Jika tanggal di Kalender besar berisi satu item diklik akan terbuka pilihan Pembayaran Satu Item",
+        img: "",
+      },
+      {
         text: "Jika klik item bertuliskan jumlah yang harus dilunasi, akan terbuka pilihan pembayaran satu item",
+        img: "",
+      },
+      {
+        text: "Lanjutkan ke <span>Pembayaran satu item</span>",
         img: "",
       },
     ],
@@ -42,6 +51,10 @@ export const paymentpage_id: PageDataType = {
       },
       {
         text: "Jika Anda hanya ingin melunasi satu item, clik tombol <span>Bayar</span> disebelah item yang akan dilunasi",
+        img: "",
+      },
+      {
+        text: "Lanjutkan ke <span>Pembayaran satu item</span>",
         img: "",
       },
     ],

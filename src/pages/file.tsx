@@ -1,10 +1,11 @@
-import { PageProps, navigate } from "gatsby";
+import { PageProps, navigate, graphql } from "gatsby";
 import React, { useEffect } from "react";
 import PageBase from "../component/homepage/PageBase";
 import Sidebar from "../component/layout/Sidebar";
 import { useGlobalContext } from "../context/AppProvider";
 
-const File = ({ location: { pathname } }: PageProps) => {
+const File = ({ location: { pathname }, data }: PageProps) => {
+  const result: any = data;
   const {
     state: {
       pageLocation: { page },
@@ -19,10 +20,29 @@ const File = ({ location: { pathname } }: PageProps) => {
   else {
     return (
       <Sidebar pathname={pathname}>
-        <PageBase />
+        <PageBase
+          contentfulImage={result.allContentfulBayarplannerDocData.nodes}
+        />
       </Sidebar>
     );
   }
 };
 
 export default File;
+export const result = graphql`
+  query MyFile {
+    allContentfulBayarplannerDocData(filter: { type: { eq: "file" } }) {
+      nodes {
+        category
+        image {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: DOMINANT_COLOR
+            width: 500
+          )
+          title
+        }
+      }
+    }
+  }
+`;

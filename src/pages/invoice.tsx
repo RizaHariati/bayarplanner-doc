@@ -1,4 +1,4 @@
-import { PageProps, navigate } from "gatsby";
+import { PageProps, navigate, graphql } from "gatsby";
 import React, { useEffect } from "react";
 import PageBase from "../component/homepage/PageBase";
 import Sidebar from "../component/layout/Sidebar";
@@ -6,7 +6,8 @@ import { useGlobalContext } from "../context/AppProvider";
 
 type Props = {};
 
-const Invoice = ({ location: { pathname } }: PageProps) => {
+const Invoice = ({ location: { pathname }, data }: PageProps) => {
+  const result: any = data;
   const {
     state: {
       pageLocation: { page },
@@ -21,10 +22,29 @@ const Invoice = ({ location: { pathname } }: PageProps) => {
   else {
     return (
       <Sidebar pathname={pathname}>
-        <PageBase />
+        <PageBase
+          contentfulImage={result.allContentfulBayarplannerDocData.nodes}
+        />
       </Sidebar>
     );
   }
 };
 
 export default Invoice;
+export const result = graphql`
+  query MyInvoice {
+    allContentfulBayarplannerDocData(filter: { type: { eq: "invoice" } }) {
+      nodes {
+        category
+        image {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: DOMINANT_COLOR
+            width: 500
+          )
+          title
+        }
+      }
+    }
+  }
+`;

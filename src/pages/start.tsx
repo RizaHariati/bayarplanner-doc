@@ -39,7 +39,11 @@ export const result = graphql`
       nodes {
         category
         image {
-          gatsbyImageData(layout: CONSTRAINED, placeholder: DOMINANT_COLOR)
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: DOMINANT_COLOR
+            width: 500
+          )
           title
         }
       }

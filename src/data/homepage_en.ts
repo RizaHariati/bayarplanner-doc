@@ -31,7 +31,15 @@ export const homepage_en: PageDataType = {
         img: "",
       },
       {
-        text: "Click any date in the Main Calender. Chose the date where the transaction activity will be held. One new item can use up to two months.",
+        text: "Click any date in the Main Calender or date in the Sidebar's calendar. If the date already contain another schedule you will see a Schedule List",
+        img: "",
+      },
+      {
+        text: "Click <span>Add </span> button, you will see a new data form",
+        img: "",
+      },
+      {
+        text: " Chose the date where the transaction activity will be held. One new item can use up to two months.",
         img: "",
       },
       {
@@ -52,6 +60,10 @@ export const homepage_en: PageDataType = {
       },
       {
         text: "Pick payment date, should you choose to pay right away. The maximum date you can choose is the date you choose when you click the calendar.",
+        img: "",
+      },
+      {
+        text: "After everything is set click <span>Add</span> button",
         img: "",
       },
     ],
@@ -123,6 +135,14 @@ export const homepage_en: PageDataType = {
       },
       {
         text: "To delete data in that day only, click <span>Delete All</span> button",
+        img: "",
+      },
+      {
+        text: "You will see an alert that tells you the data will be permanently deletedimage.png",
+        img: "",
+      },
+      {
+        text: "Klik <span>OK</span>",
         img: "",
       },
     ],

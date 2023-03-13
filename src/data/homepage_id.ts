@@ -29,7 +29,15 @@ export const homepage_id: PageDataType = {
         img: "",
       },
       {
-        text: "Ketuk Tanggal di Kalender besar atau pada tanggal di kolom sisi. Pilih tanggal kegiatan akan dilakukan sesuai dengan jumlah total yang akan dibayarkan. Tanggal yang bisa dipilih maksimal untuk dua bulan.",
+        text: "Ketuk Tanggal di Kalender besar atau pada tanggal di kolom sisi. Jika di dalam tanggal sudah ada jadwal, Anda akan melihat Daftar Jadwal hari itu",
+        img: "",
+      },
+      {
+        text: "Klik tombol <span>Add</span>, Anda akan melihat form data baru",
+        img: "",
+      },
+      {
+        text: "Pilih tanggal kegiatan akan dilakukan sesuai dengan jumlah total yang akan dibayarkan. Tanggal yang bisa dipilih maksimal untuk dua bulan.",
         img: "",
       },
       {
@@ -50,6 +58,10 @@ export const homepage_id: PageDataType = {
       },
       {
         text: "Pilih tanggal pembayaran, jika sudah dilunasi saat memasukkan penjadwalan. Tanggal yang dapat dipilih maksimal adalah sesuai tanggal yang diklik dalam kalender.",
+        img: "",
+      },
+      {
+        text: "Setelah selesai klik tombol <span>Tambahkan</span>",
         img: "",
       },
     ],
@@ -117,6 +129,14 @@ export const homepage_id: PageDataType = {
       },
       {
         text: "Untuk menghapus data dalam satu hari, klik kotak yang akan dihapus, lalu klik hapus",
+        img: "",
+      },
+      {
+        text: "Akan keluar alert yang mengingatkan bahwa data akan terhapus secara permanen",
+        img: "",
+      },
+      {
+        text: "Klik <span>OK</span>",
         img: "",
       },
     ],

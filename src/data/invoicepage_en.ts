@@ -9,6 +9,10 @@ export const invoicepage_en: PageDataType = {
         img: "",
       },
       {
+        text: "Multiple Invoice List ",
+        img: "",
+      },
+      {
         text: "Another way is by clicking the green-colored date in the small calenadar on the Sidebar. Below the calendar you will see you have list of items",
         img: "",
       },
@@ -25,11 +29,11 @@ export const invoicepage_en: PageDataType = {
         img: "",
       },
       {
-        text: "Click <span> Print All</span>,you will see the print preview of all the items you selected, check if you want to change or continue",
+        text: "Click <span> Print All</span>,you will see the print preview of all the items you selected, check if you want to change something",
         img: "",
       },
       {
-        text: "Click <span> Print All</span> lagi, you will see file extention you can choose from :Jpg, Pdf, Excel. Choose one",
+        text: "Click <span> Print All</span> again, you will see file extention you can choose from :Jpg, Pdf, Excel. Choose one",
         img: "",
       },
       {

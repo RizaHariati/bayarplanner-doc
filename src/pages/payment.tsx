@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import Sidebar from "../component/layout/Sidebar";
 import { useGlobalContext } from "../context/AppProvider";
 import PageBase from "../component/homepage/PageBase";
-import { navigate, PageProps } from "gatsby";
+import { graphql, navigate, PageProps } from "gatsby";
 
-const Payment = ({ location: { pathname } }: PageProps) => {
+const Payment = ({ location: { pathname }, data }: PageProps) => {
+  const result: any = data;
   const {
     state: {
       pageLocation: { page },
@@ -21,10 +22,29 @@ const Payment = ({ location: { pathname } }: PageProps) => {
   else {
     return (
       <Sidebar pathname={pathname}>
-        <PageBase />
+        <PageBase
+          contentfulImage={result.allContentfulBayarplannerDocData.nodes}
+        />
       </Sidebar>
     );
   }
 };
 
 export default Payment;
+export const result = graphql`
+  query MyPayment {
+    allContentfulBayarplannerDocData(filter: { type: { eq: "payment" } }) {
+      nodes {
+        category
+        image {
+          gatsbyImageData(
+            layout: CONSTRAINED
+            placeholder: DOMINANT_COLOR
+            width: 500
+          )
+          title
+        }
+      }
+    }
+  }
+`;

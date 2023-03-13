@@ -9,6 +9,10 @@ export const invoicepage_id: PageDataType = {
         img: "",
       },
       {
+        text: "Daftar multiple kwitansi.",
+        img: "",
+      },
+      {
         text: "Di kolom sisi jika diklik pada tanggal yang berwarna hijau, di bagian bawah akan ditujukkan list yang akan menunjukkan daftar kegiatan pelunasan atau penerimaan pada tanggal tersebut",
         img: "",
       },
@@ -16,6 +20,7 @@ export const invoicepage_id: PageDataType = {
         text: "Jika di klik pada tombol <span>Print semua</span>, maka akan terbuka Daftar Multiple Kwitansi yang bisa di download",
         img: "",
       },
+
       {
         text: "Jika ingin menambah jumlah tanggal kwitansi yang akan diprint, maka klik pada tanggal terpilih",
         img: "",

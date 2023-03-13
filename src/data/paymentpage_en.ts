@@ -11,16 +11,30 @@ export const paymentpage_en: PageDataType = {
         text: "On the main calendar you can see the whole list. Pick one of the date of payment list that you are going to pay. If you click on a date with multiple item, you will see payment item list.",
         img: "",
       },
+
+      {
+        text: "On the side column you will see all the items you haven't pay for a month. If you click <span>Pay</span> button you will see the payment list for that day.",
+        img: "",
+      },
+      {
+        text: "Continue to <span>Payment list for the Day</span>.",
+        img: "",
+      },
+
       {
         text: "If you clik on a date with only one item you will see a Payment for one item form",
         img: "",
       },
       {
-        text: "Ont the side column you will see all the items you haven't pay for a month. If you click <span>Pay</span> button you will see the payment list for that day.",
+        text: "If you click on the button with the price tag, you will see a payment for one item option",
         img: "",
       },
       {
         text: "If you click on the button with the price tag, you will see a payment for one item option",
+        img: "",
+      },
+      {
+        text: "Continue to <span>Payment for Item</span>",
         img: "",
       },
     ],
@@ -30,7 +44,7 @@ export const paymentpage_en: PageDataType = {
     closing: [""],
   },
   daypayment: {
-    title: "Payment List Form",
+    title: "Payment List For the Day",
     list: [
       {
         text: "If you want to mark payment on all the items on the list for that day only you can pick the <span>payment date</span> ",
