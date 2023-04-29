@@ -68,10 +68,11 @@ export const sidebar_en: SidebarType = {
     link: "/file/",
     icon: faFile,
     content: {
-      uploadingData: "Uploading Data",
       savingData: "Saving Data",
+      uploadingData: "Uploading Data",
       clearingData: "Clean Data Browser",
       addData: "Add other data",
+      deleteUser: "Delete User",
     },
     opening: [
       "All of the data will be temporarily saved on your browser. After editing you should <span>save your data to your hard drive</span> or there's a big chance it will be deleted from your browser. This is by design so your data can be secured",

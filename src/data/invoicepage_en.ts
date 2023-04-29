@@ -51,10 +51,7 @@ export const invoicepage_en: PageDataType = {
     title: "Print single data",
     list: [
       { text: "On the main menu, click <span>Invoice</span> button", img: "" },
-      {
-        text: "Dibagian bawah kalender Tekan tombol disebelah item yang akan diedit.",
-        img: "",
-      },
+
       {
         text: "On the Main calendar you can see the whole list of paid items, click one of the dates dan you will see Multiple Invoice List ",
         img: "",

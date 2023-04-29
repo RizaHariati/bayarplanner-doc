@@ -1,5 +1,34 @@
 import { PageDataType } from "../context/types.d";
 export const filepage_id: PageDataType = {
+  savingData: {
+    title: "Simpan Data",
+    list: [
+      {
+        text: "Saat anda sudah melakukan registrasi maka di main menu akan ada menu <span>Simpan Data</span>",
+        img: "",
+      },
+      {
+        text: "Akan terlihat pilihan bentuk output yang bisa dipilih :JSON, jika anda ingin menggunakan data kembali. Dan Excel, untuk laporan keuangan. Pilih salah satu",
+        img: "",
+      },
+      {
+        text: "Ubah nama jika diperlukan, lalu tekan <span>OK</span> ",
+        img: "",
+      },
+      {
+        text: "Di Windows, data akan anda temukan pada folder <span>downloads</span>. Misalnya pada 'C:Users&#92;rizah&#92;Downloads",
+        img: "",
+      },
+      {
+        text: "Di Android, pertama klik <span>File</span> folder.Lalu klik menu bar, untuk membuka <span>download</span> folder didalamnya. Dan didapatlah file dengan extention *.json. ",
+        img: "",
+      },
+    ],
+    opening: [
+      "Selalu simpan data sebelum menutup BayarPlanner. Data ini bisa anda kirim lewat email maupun bluetooth, untuk kemudian diolah dari computer maupun handphone dari lain. Data bisa disimpan dalam bentuk JSON, maupun bentuk Excel",
+    ],
+    closing: [""],
+  },
   uploadingData: {
     title: "Upload Data",
     list: [
@@ -31,27 +60,7 @@ export const filepage_id: PageDataType = {
     ],
     closing: [""],
   },
-  savingData: {
-    title: "Simpan Data",
-    list: [
-      {
-        text: "Saat anda sudah melakukan registrasi maka di main menu akan ada menu <span>Simpan Data</span>",
-        img: "",
-      },
-      {
-        text: "Akan terlihat pilihan bentuk output yang bisa dipilih :JSON, jika anda ingin menggunakan data kembali. Dan Excel, untuk laporan keuangan. Pilih salah satu",
-        img: "",
-      },
-      {
-        text: "Ubah nama jika diperlukan, lalu tekan <span>OK</span> ",
-        img: "",
-      },
-    ],
-    opening: [
-      "Selalu simpan data sebelum menutup BayarPlanner. Data ini bisa anda kirim lewat email maupun bluetooth, untuk kemudian diolah dari computer maupun handphone dari lain. Data bisa disimpan dalam bentuk JSON, maupun bentuk Excel",
-    ],
-    closing: [""],
-  },
+
   clearingData: {
     title: "Bersihkan Data Browser",
     list: [
@@ -129,7 +138,7 @@ export const filepage_id: PageDataType = {
       { text: "Klik tombol <span>OK</span>", img: "" },
     ],
     opening: [
-      "Jika BayarPlanner sudah digunahan oleh 3 user, untuk menambah lagi anda bisa menghapus data yang ada. Jangan lupa <span>menyimpan data</span> sebelumnya",
+      "Jika BayarPlanner sudah digunahan oleh 3 user, untuk menambah lagi anda bisa menghapus data yang ada. Jangan lupa <span>menyimpan data</span> sebelumnya. Anda hanya bisa menghapus user jika BayarPlanner digunakan oleh lebih dari dua user. Untuk menghapus data gunakan Hapus Data Browser",
     ],
     closing: [""],
   },

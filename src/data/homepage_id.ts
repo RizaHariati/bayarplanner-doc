@@ -8,6 +8,19 @@ export const homepage_id: PageDataType = {
     ],
     closing: [""],
   },
+  register2: {
+    title: "Register Nama",
+    list: [
+      { text: "Klik tombol <span>username</span> ", img: "" },
+      { text: "Masukkan Nama", img: "" },
+      { text: "Pilih Avatar dengan meng klik gambar yang tersedia", img: "" },
+      { text: "Klik tombol <span>Daftar</span>", img: "" },
+    ],
+    opening: [
+      "Nama akan digunakan untuk database penyimpanan jadwal. BayarPlanner tidak  bisa digunakan tanpa data ini.",
+    ],
+    closing: [""],
+  },
   register: {
     title: "Register Nama",
     list: [

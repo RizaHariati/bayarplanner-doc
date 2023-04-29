@@ -8,6 +8,7 @@ export const homepage_en: PageDataType = {
     ],
     closing: [""],
   },
+
   register: {
     title: "Register Name",
     list: [

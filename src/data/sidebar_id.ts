@@ -68,10 +68,11 @@ export const sidebar_id: SidebarType = {
     link: "/file/",
     icon: faFile,
     content: {
-      uploadingData: "Upload Data",
       savingData: "Simpan Data",
+      uploadingData: "Upload Data",
       clearingData: "Bersihkan Data Browser",
       addData: "Tambahkan Data Lain",
+      deleteUser: "Hapus User",
     },
     opening: [
       "Semua data akan disimpan sementara didalam browser. Setelah pemakaian <span>data harus disimpan kedalam hardisk</span>, atau data akan dihapus dari browser. Ini sengaja dilakukan agar semua data berada dalam kendali Anda.",
