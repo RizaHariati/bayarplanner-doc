@@ -70,6 +70,7 @@ export const sidebar_id: SidebarType = {
     content: {
       savingData: "Simpan Data",
       uploadingData: "Upload Data",
+      printData: "Print Data",
       clearingData: "Bersihkan Data Browser",
       addData: "Tambahkan Data Lain",
       deleteUser: "Hapus User",

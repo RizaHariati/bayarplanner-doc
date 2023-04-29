@@ -34,15 +34,13 @@ const SidebarContent = ({ pathname }: Props) => {
                     navigate(link);
                   }}
                 >
-                  <div className=" w-9 h-9 flex items-center justify-center transition-all">
+                  <div className=" w-9 h-9 flex items-center justify-center transition-all ">
                     <FontAwesomeIcon
                       icon={icon}
                       className="text-xl sm:text-lg  text-mainDrk hover:text-mainDrkActive active:text-opacity-20 focus:text-opacity-70  col-span-1 w-full sm:w-fit  transition-all "
                     />
                   </div>
-                  <h3 className="text-left font-medium  col-span-11 w-full pl-2">
-                    {title}
-                  </h3>
+                  <h3 className="sidebar-content-title">{title}</h3>
                 </button>
 
                 {index !== 0 && (

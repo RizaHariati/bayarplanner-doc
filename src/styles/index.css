@@ -34,6 +34,9 @@
   h5 {
     @apply capitalize text-base font-montserrat font-normal;
   }
+  span {
+    @apply font-bold;
+  }
   li > span {
     @apply font-bold;
   }
@@ -100,6 +103,9 @@
   }
   .sidebar-content {
     @apply grid grid-cols-12 w-screen sm:w-full overflow-hidden;
+  }
+  .sidebar-content-title {
+    @apply text-left font-medium  col-span-11 w-full pl-2;
   }
   .sidebar-title {
     @apply text-left font-medium w-0 overflow-hidden transition-all;

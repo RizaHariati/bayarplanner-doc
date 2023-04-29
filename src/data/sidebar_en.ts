@@ -69,7 +69,8 @@ export const sidebar_en: SidebarType = {
     icon: faFile,
     content: {
       savingData: "Saving Data",
-      uploadingData: "Uploading Data",
+      uploadingData: "Upload Data",
+      printData: "Print Data",
       clearingData: "Clean Data Browser",
       addData: "Add other data",
       deleteUser: "Delete User",

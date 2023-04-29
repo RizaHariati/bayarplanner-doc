@@ -7,10 +7,7 @@ export const filepage_id: PageDataType = {
         text: "Saat anda sudah melakukan registrasi maka di main menu akan ada menu <span>Simpan Data</span>",
         img: "",
       },
-      {
-        text: "Akan terlihat pilihan bentuk output yang bisa dipilih :JSON, jika anda ingin menggunakan data kembali. Dan Excel, untuk laporan keuangan. Pilih salah satu",
-        img: "",
-      },
+
       {
         text: "Ubah nama jika diperlukan, lalu tekan <span>OK</span> ",
         img: "",
@@ -25,7 +22,7 @@ export const filepage_id: PageDataType = {
       },
     ],
     opening: [
-      "Selalu simpan data sebelum menutup BayarPlanner. Data ini bisa anda kirim lewat email maupun bluetooth, untuk kemudian diolah dari computer maupun handphone dari lain. Data bisa disimpan dalam bentuk JSON, maupun bentuk Excel",
+      "Selalu simpan data sebelum menutup BayarPlanner. Data ini bisa anda kirim lewat email maupun bluetooth, untuk kemudian diolah dari computer maupun handphone dari lain. Data akan disimpan dalam bentuk JSON",
     ],
     closing: [""],
   },
@@ -57,6 +54,36 @@ export const filepage_id: PageDataType = {
     ],
     opening: [
       "Data yang digunakan berbentuk JSON, dan bisa anda akses di perangkat manapun yang menggunakan browser setelah anda menyimpan data tersebut.",
+    ],
+    closing: [""],
+  },
+
+  printData: {
+    title: "Print Data",
+    list: [
+      {
+        text: "Untuk mencetak laporan keuangan anda bisa klik <span>icon print</span>",
+        img: "",
+      },
+      {
+        text: "Anda akan melihat pilihan penyimpanan data. Pilih <span>Urut data berdasarkan Tanggal Jadwal</span>, jika anda menginginkannya. Seluruh data akan dimasukkan, termasuk jadwal yang belum dilunasi",
+        img: "",
+      },
+      {
+        text: "Anda juga bisa memilih menyimpan data perbulan. Lalu klik <span>OK</span> dan data akan didownload",
+        img: "",
+      },
+      {
+        text: "Anda bisa memilih <span>Urut Transaksi berdasarkan tanggal transaksi</span> jika Anda hanya memerlukan data berkaitan dengan kegiatan keuangan anda. Jadwal yang belum dilunasi akan diabaikan.",
+        img: "",
+      },
+      {
+        text: "Anda juga bisa memilih menyimpan data perbulan. Lalu klik <span>OK</span> dan data akan didownload",
+        img: "",
+      },
+    ],
+    opening: [
+      "Data Anda bisa di save dalam bentuk excel untuk laporan keuangan anda. Data bisa diurut berdasarkan tanggal transaksi yang sudah anda lunasi, atau berdasarkan tanggal dimana jadwal kegiatan akan dilakukan .",
     ],
     closing: [""],
   },

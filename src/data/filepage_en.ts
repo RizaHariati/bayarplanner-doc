@@ -7,10 +7,7 @@ export const filepage_en: PageDataType = {
         text: "After you register your name, in the main menu you will find <span>Save Data</span> option. ",
         img: "",
       },
-      {
-        text: "You will see two file extention options :JSON, if you want to reupload and edit data. Dan Excel, for your financial report. Pick one",
-        img: "",
-      },
+
       {
         text: "Change the title name if you like, Then click <span>OK</span> button",
         img: "",
@@ -25,7 +22,7 @@ export const filepage_en: PageDataType = {
       },
     ],
     opening: [
-      "Always save your data before closing BayarPlanner. You then can send this data to your other gadget, via email or bluetooth, to be used in other browser. You can save your data in JSON or Excel form",
+      "Always save your data before closing BayarPlanner. You then can send this data to your other gadget, via email or bluetooth, to be used in other browser. You will save your data in JSON form",
     ],
     closing: [""],
   },
@@ -57,6 +54,37 @@ export const filepage_en: PageDataType = {
     ],
     opening: [
       "BayarPlanner using JSON format data. You can save the data file right after you use it and then upload it from any computer or laptop that has browser",
+    ],
+    closing: [""],
+  },
+
+  printData: {
+    title: "Print Data",
+    list: [
+      {
+        text: "To print your financial report in excel, you can first click <span>print icon</span>",
+        img: "",
+      },
+      {
+        text: "You will see the save data options. Pick <span>Sort Transaction Based on Schedule Date</span> if you want to. This will include all schedules, including the ones that haven't been paid ",
+        img: "",
+      },
+      {
+        text: "You can also pick the single month option. And then click <span>OK</span> and the data will be downloaded.",
+        img: "",
+      },
+
+      {
+        text: "You can pick <span>Sort Transaction Based on Transaction Date</span>. The unfinished transaction will be ignored.",
+        img: "",
+      },
+      {
+        text: "You can also pick the single month option. And then click <span>OK</span> and the data will be downloaded.",
+        img: "",
+      },
+    ],
+    opening: [
+      "You can save your financial report in the form of excel. You can choose between scheduled date based file or finished transaction based file",
     ],
     closing: [""],
   },
